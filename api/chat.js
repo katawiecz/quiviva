@@ -2,8 +2,28 @@ import { Configuration, OpenAIApi } from "openai";
 import fs from "fs";
 import path from "path";
 
+
+
 export default async function handler(req, res) {
-  const { message } = req.body;
+    if (req.method !== "POST") {
+    return res.status(405).json({ error: "Only POST requests allowed" });
+  }
+
+  let body = req.body;
+
+    if (typeof body === "string") {
+    try {
+      body = JSON.parse(body);
+    } catch (e) {
+      return res.status(400).json({ error: "Invalid JSON" });
+    }
+  }
+
+    const { message } = body || {};
+  if (!message) {
+    return res.status(400).json({ error: "Message is missing" });
+  }
+
 
   const filePath = path.join(process.cwd(), "public", "kasia-profile.json");
   const fileData = fs.readFileSync(filePath, "utf-8");
