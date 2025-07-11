@@ -1,0 +1,143 @@
+{
+  "passions": [
+    "Tea", "Guitar", "Astronomy", "Literature", "Technology",
+    "Cooking", "Gardening", "Art", "Music", "Travel", "Cinema", "Finance"
+  ],
+  "work_experience": [
+    "ITIL", "Problem-solving", "Teamwork and communication", "Adaptability", "Intune", "ServiceNow",
+    "Mobile Device Management (iOS & Android)", "Hardware/software troubleshooting",
+    "Workload prioritization", "Root cause analysis", "Team collaboration",
+    "Technical support", "ICT", "Cloud Computing", "Customer interaction",
+    "Windows 10", "Windows 11", "Citrix", "SCCM", "Active Directory", "Incident handling",
+    "AI prompt creation", "AI instructions creation", "GPT chatbot creation"
+  ],
+  "about": [
+    "Kasia was born on 26 October 1989",
+    "Kasia is married",
+    "Kasia lives in Italy",
+    "Kasia is Polish",
+    "Kasia is from the city of Mysłowice in Silesia",
+    "Kasia likes movies"
+    "Kasia has driving license"
+  ],
+  
+  "workplace": [
+    {
+      "position": "Global Workplace Specialist",
+      "company": "Mediterranean Shipping Company S.A. (MSC)",
+      "city": "Turin",
+      "start": "2022-04-04",
+      "end": "2025-06-14"
+    },
+    {
+      "position": "Technical Services Engineer",
+      "company": "Fujitsu Poland",
+      "city": "Katowice",
+      "start": "2021-03",
+      "end": "2022-04"
+    },
+    {
+      "position": "Associate Technical Services Engineer",
+      "company": "Fujitsu Poland",
+      "city": "Katowice",
+      "start": "2020-02",
+      "end": "2021-03"
+    },
+    {
+      "position": "Junior Infrastructure Engineer",
+      "company": "Capgemini",
+      "city": "Katowice",
+      "start": "2019-06",
+      "end": "2020-01"
+    },
+    {
+      "position": "Service Centre Analyst",
+      "company": "Capgemini",
+      "city": "Katowice",
+      "start": "2016-05",
+      "end": "2019-05"
+    }
+  ],
+  "education": [
+    {
+      "type": "Master's Degree",
+      "title": "Master of Arts in Scientific Information and Library Science",
+      "institution": "University of Silesia",
+      "location": "Katowice, Poland",
+      "start": "2011-10-01",
+      "end": "2013-09-30"
+    },
+    {
+      "type": "Bachelor's Degree",
+      "title": "Bachelor of Arts in Scientific Information and Library Science",
+      "institution": "University of Silesia",
+      "location": "Katowice, Poland",
+      "start": "2008-10-01",
+      "end": "2011-09-30"
+    }
+  ],
+  "skills": {
+    "Tea": [
+      "Choosing the right tea based on mood",
+      "Knowledge of less common tea types",
+      "Ability to properly brew tea",
+      "I know some fun facts about tea, like where lapsang tea comes from"
+    ],
+    "Guitar": [
+      "Playing songs on guitar",
+      "Songs I can play: Simple Man (Lynyrd Skynyrd), Knockin' On Heaven's Door"
+    ],
+    "Astronomy": [
+      "Can identify the Big Dipper and Cassiopeia in the night sky",
+      "I know there's a large nebula near Orion",
+      "I know that Europa is a moon of Jupiter",
+      "I know there's water on Europa",
+      "I can tell the difference between a star and a planet at night"
+    ],
+    "Literature": [
+      "Experimenting with writing novels and poetry"
+    ],
+    "Technology": [
+      "Once replaced a CPU radiator myself"
+    ],
+    "Cooking": [
+      "I love and know how to cook",
+      "I keep and feed my own sourdough starter",
+      "I can bake bread"
+    ],
+    "Gardening": [
+      "I've grown tomatoes, cucumbers, raspberries, strawberries, thyme, sage, rosemary, mint, avocado, onion",
+      "I have my own small garden",
+      "I can grow plants from seed"
+    ],
+    "Art": [
+      "Can recognize Caravaggio's works",
+      "Can take a good photo",
+      "Learning and practicing drawing",
+      "Creative writing – created and maintained my own blog"
+    ],
+    "Music": [
+      "Sing solo and in choir",
+      "Know music theory and how to read neumes",
+      "Know vocal ranges and how to identify them"
+    ],
+    "Travel": [
+      "Can plan trips",
+      "Not afraid of new places",
+      "I enjoy meeting people and talking to strangers"
+    ],
+    "Cinema": [
+      "Know how to shoot a film",
+      "Participated in creating short films",
+      "Can identify film techniques"
+    ],
+    "Finance": [
+      "I can save money toward specific goals (e.g. new laptop)",
+      "I manage my personal budget in a structured way"
+    ],
+    "Other": [
+      "Creative thinking",
+      "Have a driving license and can drive a car"
+    ]
+  }
+}
