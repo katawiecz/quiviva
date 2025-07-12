@@ -1,7 +1,7 @@
 {
   "passions": [
     "Tea", "Guitar", "Astronomy", "Literature", "Technology",
-    "Cooking", "Gardening", "Art", "Music", "Travel", "Cinema", "Finance"
+    "Cooking", "Gardening", "Art", "Music", "Travel", "Cinema"
   ],
   "work_experience": [
     "ITIL", "Problem-solving", "Teamwork and communication", "Adaptability", "Intune", "ServiceNow",
@@ -104,7 +104,7 @@
       "I love and know how to cook",
       "I keep and feed my own sourdough starter",
       "I can bake bread",
-      "I can bake cookies"
+      "I like cooking soup"
     ],
     "Gardening": [
       "I've grown tomatoes, cucumbers, raspberries, strawberries, thyme, sage, rosemary, mint, avocado, onion",
@@ -136,6 +136,7 @@
       "I can save money toward specific goals (e.g. new laptop)",
       "I manage my personal budget in a structured way"
     ],
+
     "Other": [
       "Creative thinking",
       "Have a driving license and can drive a car"
