@@ -6,8 +6,6 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-
-
 module.exports = async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
@@ -24,8 +22,7 @@ module.exports = async function handler(req, res) {
 
   let body = req.body;
 
-    if (typeof body === "string") {
-
+  if (typeof body === "string") {
     try {
       body = JSON.parse(body);
     } catch (e) {
@@ -33,12 +30,12 @@ module.exports = async function handler(req, res) {
     }
   }
 
-    const { message } = body || {};
+  const { message } = body || {};
   if (!message) {
     return res.status(400).json({ error: "Message is missing" });
   }
 
-    try {
+  try {
     const filePath = path.join(process.cwd(), "public", "kasia-profile.json");
     const fileData = fs.readFileSync(filePath, "utf-8");
     const kasiaProfile = JSON.parse(fileData);
@@ -60,7 +57,7 @@ Use this structured information to answer precisely and do not invent jobs or pl
 
 Here is her profile: ${JSON.stringify(kasiaProfile, null, 2)}`;
 
-    const completion = await openai.createChatCompletion({
+     const completion = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
       messages: [
         { role: "system", content: systemPrompt },
@@ -68,7 +65,7 @@ Here is her profile: ${JSON.stringify(kasiaProfile, null, 2)}`;
       ]
     });
 
-    const reply = completion.data.choices[0].message.content;
+    const reply = completion.choices[0].message.content;
     res.status(200).json({ reply });
 
   } catch (error) {
@@ -76,5 +73,4 @@ Here is her profile: ${JSON.stringify(kasiaProfile, null, 2)}`;
     res.setHeader("Content-Type", "application/json");
     res.status(500).json({ error: "Internal server error", details: error.message });
   }
-
-  }
+};
