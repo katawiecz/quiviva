@@ -68,13 +68,13 @@
           });
 
           const data = await response.json();
+          console.log("🟢 Got response:", data);
           const reply = data.reply || "(No response)";
           log.innerHTML += `<div><strong>Bot:</strong> ${reply}</div>`;
         } catch (error) {
           log.innerHTML += `<div><strong>Bot:</strong> Error: ${error.message}</div>`;
         }
 
-        console.log("🟢 Got response:", data);
 
         log.scrollTop = log.scrollHeight;
       }
