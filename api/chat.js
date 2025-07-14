@@ -26,7 +26,7 @@ module.exports = async function handler(req, res) {
   let body = req.body;
 
     if (typeof body === "string") {
-      
+
     try {
       body = JSON.parse(body);
     } catch (e) {
@@ -73,6 +73,9 @@ Here is her profile: ${JSON.stringify(kasiaProfile, null, 2)}`;
     res.status(200).json({ reply });
 
   } catch (error) {
+    console.error("❌ Błąd w handlerze:", error);
+    res.setHeader("Content-Type", "application/json");
     res.status(500).json({ error: "Internal server error", details: error.message });
   }
+
   }
