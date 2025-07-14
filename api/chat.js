@@ -1,11 +1,15 @@
-import { Configuration, OpenAIApi } from "openai";
-import fs from "fs";
-import path from "path";
+const OpenAI = require("openai");
+const fs = require("fs");
+const path = require("path");
 
 
+const configuration = new OpenAI.Configuration({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+const openai = new OpenAI.OpenAIApi(configuration);
 
-export default async function handler(req, res) {
 
+module.exports = async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
@@ -22,20 +26,18 @@ export default async function handler(req, res) {
   let body = req.body;
 
     if (typeof body === "string") {
+      
     try {
       body = JSON.parse(body);
     } catch (e) {
-      res.setHeader("Content-Type", "application/json");
       return res.status(400).json({ error: "Invalid JSON" });
     }
   }
 
     const { message } = body || {};
   if (!message) {
-    res.setHeader("Content-Type", "application/json");
     return res.status(400).json({ error: "Message is missing" });
   }
-
 
     try {
     const filePath = path.join(process.cwd(), "public", "kasia-profile.json");
@@ -58,12 +60,6 @@ Her profile is structured in JSON format. For example:
 Use this structured information to answer precisely and do not invent jobs or places she never mentioned.
 
 Here is her profile: ${JSON.stringify(kasiaProfile, null, 2)}`;
-
-    const configuration = new Configuration({
-      apiKey: process.env.OPENAI_API_KEY,
-    });
-
-    const openai = new OpenAIApi(configuration);
 
     const completion = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
