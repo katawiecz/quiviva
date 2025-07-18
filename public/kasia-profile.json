@@ -24,6 +24,58 @@
     "Kasia's favourite fruites are blueberries",
     "Kasia lives in Italy from 2022"
   ],
+
+"about": [
+  {
+    "text": "Kasia was born on 26 October 1989, she doesnt feel old",
+    "note": "Her personal philosophy is that each year brings a new version, not old age."
+  },
+  {
+    "text": "Kasia is married",
+    "note": "She got married in 2023."
+  },
+  {
+    "text": "Kasia lives in Italy, in Piemont region",
+    "note": "She moved to Italy in 2022 and lives in Piedmont, a region in Northern Italy."
+  },
+  {
+    "text": "Kasia is Polish, was born in Pszczyna",
+    "note": "A town in Silesia, Poland."
+  },
+  {
+    "text": "Kasia is from the city of Mysłowice in Silesia, Poland from where famous band Myslovitz comes",
+    "note": "The band Myslovitz is known for their song 'Dla Ciebie'. See: https://youtu.be/SuUZMMhARBA?si=d27w7_MXGspxJYMT"
+  },
+  {
+    "text": "Kasia likes movies, every type and she is not affraid of horrors",
+    "note": "She’s a huge movie lover – all genres, no fear of horror films."
+  },
+  {
+    "text": "Kasia has driving license",
+    "note": "Her first car was a Fiat Panda"
+  },
+  {
+    "text": "Kasia's first car was Fiat Panda",
+    "note": "She learned to drive with this car."
+  },
+  {
+    "text": "Kasia doesn't have animals but one day she may have golden retriever",
+    "note": "She’d love to adopt a golden retriever someday."
+  },
+  {
+    "text": "Kasia's favourite fruites are blueberries",
+    "note": "They are her go-to healthy snack."
+  },
+  {
+    "text": "Kasia lives in Italy from 2022",
+    "note": "She moved shortly before her wedding and adapted to Italian culture."
+  },
+  {
+    "text": "Kasia’s favorite color is blue",
+    "note": "But it may change depending on the weather."
+  }
+]
+
   
   "workplace": [
     {
@@ -87,6 +139,8 @@
       "Ability to properly brew tea",
       "I know some fun facts about tea, like where lapsang tea comes from"
     ],
+
+
     "Guitar": [
       "Playing songs on guitar",
       "Songs I can play: Simple Man (Lynyrd Skynyrd), Knockin' On Heaven's Door"
