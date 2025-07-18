@@ -52,7 +52,7 @@ Her profile is structured in JSON format. For example:
 - "about" includes her personal and demographic details,
 - "passions" are her general interests.
 
-Use this structured information to answer precisely and do not invent jobs or places she never mentioned.
+Use this structured information to answer and do not invent jobs or places she never mentioned.
 
 Here is her profile: ${JSON.stringify(kasiaProfile, null, 2)}`;
 

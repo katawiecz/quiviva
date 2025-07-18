@@ -1,7 +1,7 @@
 {
   "passions": [
     "Tea", "Guitar", "Astronomy", "Literature", "Technology",
-    "Cooking", "Gardening", "Art", "Music", "Travel", "Cinema", "Finance"
+    "Cooking", "Gardening", "Art", "Music", "Travel", "Cinema"
   ],
   "work_experience": [
     "ITIL - Kasia is just before certification", "Problem-solving", "Teamwork and communication", "Adaptability", "Intune", "ServiceNow",
@@ -39,7 +39,8 @@
     "Kasia's favourite fruites are blueberries",
     "Kasia's favourite color is blue",
     "Kasia lives in Italy from 2022",
-    "Ksia mail address is katawiecz@gmail.com"
+    "Ksia mail address is katawiecz@gmail.com",
+    "Kasia has one sister"
   ],
   
   "workplace": [
@@ -182,8 +183,7 @@
     ],
  
     "Other": [
-      "Creative thinking",
-      "Have a driving license and can drive a car"
+      "Creative thinking"
     ]
   }
 }
