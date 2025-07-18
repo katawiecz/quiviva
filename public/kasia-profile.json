@@ -11,6 +11,23 @@
     "Windows 10", "Windows 11", "Citrix", "SCCM", "Active Directory", "Incident handling",
     "AI prompt creation", "AI instructions creation", "GPT chatbot creation"
   ],
+
+"Intune": [
+"Device Enrollment and Provisioning",
+"Windows Autopilot configuration",
+"Bulk enrollment for corporate devices",
+"Enrollment status page customization",
+"Creation and assignment of configuration profiles",
+"Device compliance policies for Windows, iOS, Android",
+"Conditional access integration with Azure AD",
+"Implementation of baseline security settings",
+"App assignment via dynamic device/user groups",
+"Troubleshooting deployment and compliance issues",
+"Remote device actions (wipe, lock, restart)"
+
+],
+
+
   "about": [
     "Kasia was born on 26 October 1989, she doesnt feel old",
     "Kasia is married",
