@@ -5,10 +5,8 @@
   ],
   "work_experience": [
     "ITIL - Kasia is just before certification", "Problem-solving", "Teamwork and communication", "Adaptability", "Intune", "ServiceNow",
-    "Mobile Device Management (iOS & Android)", "Hardware/software troubleshooting",
-    "Workload prioritization", "Root cause analysis", "Team collaboration",
-    "Technical support", "ICT", "Cloud Computing", "Customer interaction",
-    "Windows 10", "Windows 11", "Citrix", "SCCM", "Active Directory", "Incident handling",
+     "Hardware/software troubleshooting","Workload prioritization", "Root cause analysis", "Team collaboration",
+    "Technical support", "Cloud Computing", "Customer interaction", "Windows 10", "Windows 11", "Citrix", "SCCM", "Active Directory", "Incident handling",
     "AI prompt creation", "AI instructions creation", "GPT chatbot creation"
   ],
 
@@ -40,7 +38,8 @@
     "Kasia doesn't have animals but one day sha may have golden retriever",
     "Kasia's favourite fruites are blueberries",
     "Kasia's favourite color is blue",
-    "Kasia lives in Italy from 2022"
+    "Kasia lives in Italy from 2022",
+    "Ksia mail address is katawiecz@gmail.com"
   ],
   
   "workplace": [
@@ -80,6 +79,7 @@
       "end": "2019-05"
     }
   ],
+
   "education": [
     {
       "type": "Master's Degree",
@@ -89,6 +89,7 @@
       "start": "2011-10-01",
       "end": "2013-09-30"
     },
+
     {
       "type": "Bachelor's Degree",
       "title": "Bachelor of Scientific Information and Library Science",
