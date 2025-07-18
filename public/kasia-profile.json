@@ -40,7 +40,9 @@
     "Kasia's favourite color is blue",
     "Kasia lives in Italy from 2022",
     "Ksia mail address is katawiecz@gmail.com",
-    "Kasia has one sister"
+    "Kasia has one sister",
+    "Kasia's favourite food Leczo, Gulasz and chicken in every form",
+    "Kasia's favourite icecreem taste is lemon"
   ],
   
   "workplace": [
@@ -101,30 +103,31 @@
     }
   ],
 
-"university_courses": [
+  "university_courses": [
 
-"Information Technology",
-"Information Retrieval and Prompting Techniques on the Internet",
-"Formal Document Processing. Data Formats",
-"Information Retrieval Languages",
-"Information Technology ",
-"Library Collection Management (Acquisition, Access)",
-"Methodology of Information Technology Teaching ",
-"Library Automation",
-"Information Systems ",
-"National Information Infrastructure",
-"Information and Knowledge Society",
-"Specialized Terminology in Information Science and Librarianship",
-"Contemporary Research Trends in Information Science (Theory and Methodology)",
-"Digital documents Publishing and Editing "
-],
+  "Information Technology",
+  "Information Retrieval and Prompting Techniques on the Internet",
+  "Formal Document Processing. Data Formats",
+  "Information Retrieval Languages",
+  "Information Technology ",
+  "Library Collection Management (Acquisition, Access)",
+  "Methodology of Information Technology Teaching ",
+  "Library Automation",
+  "Information Systems ",
+  "National Information Infrastructure",
+  "Information and Knowledge Society",
+  "Specialized Terminology in Information Science and Librarianship",
+  "Contemporary Research Trends in Information Science (Theory and Methodology)",
+  "Digital documents Publishing and Editing "
+  ],
 
   "skills": {
     "Tea": [
       "Choosing the right tea based on mood",
       "Knowledge of less common tea types",
       "Ability to properly brew tea",
-      "I know some fun facts about tea, like where lapsang tea comes from"
+      "I know some fun facts about tea, like where lapsang tea comes from",
+      "Kasia's favourite tea taste is the one she compose by herself"
     ],
     "Guitar": [
       "Playing songs on guitar",
@@ -169,21 +172,18 @@
       "Can plan trips",
       "Not afraid of new places",
       "I enjoy meeting people and talking to strangers",
-      "Kasia have been on 3 crouses",
+      "Kasia have been on 3 ship crouses",
       "Kasia has been in Jordania and visited Petra",
       "Kasia visited Wadi-Rum desert in Jordania",
       "Kasia visited Busteni in Romania",
-      "Kasia visited London, Barcelona, Valencia, New York, Amman, Mediolan, Warsaw, Krakow, Petra, Boston, Washington DC, Valetta, Prag, Akaba, Marsillia",
-      "Kasia likes airports"
+      "Kasia visited London, Barcelona, Valencia, New York, Amman, Mediolan, Warsaw, Krakow, Petra, Boston, Washington DC, Valetta, Prag, Akaba, Marsillia"
     ],
     "Cinema": [
       "Know how to shoot a film",
       "Participated in creating short films",
-      "Can identify film techniques"
-    ],
- 
-    "Other": [
-      "Creative thinking"
+      "Can identify film techniques",
+      "Kasia's favourite director is Martin Scorsese",
+      "Short movie Kasia did on Erasmus Youth Exchange Project FILMAKER in Busteni (Romania): https://www.youtube.com/watch?v=W3UfebepLyo&t"
     ]
   }
 }
