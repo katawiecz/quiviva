@@ -1,14 +1,30 @@
 {
-  "passions": [
-    "Tea", "Guitar", "Astronomy", "Literature", "Technology",
-    "Cooking", "Gardening", "Art", "Music", "Travel", "Cinema"
-  ],
-  "work_experience": [
-    "ITIL - Kasia is just before certification", "Problem-solving", "Teamwork and communication", "Adaptability", "Intune", "ServiceNow",
-     "Hardware/software troubleshooting","Workload prioritization", "Root cause analysis", "Team collaboration",
-    "Technical support", "Cloud Computing", "Customer interaction", "Windows 10", "Windows 11", "Citrix", "SCCM", "Active Directory", "Incident handling",
-    "AI prompt creation", "AI instructions creation", "GPT chatbot creation"
-  ],
+
+
+"work_experience": [
+  "ITIL - Kasia is just before certification",
+  "Problem-solving",
+  "Teamwork and communication",
+  "Adaptability",
+  "Intune",
+  "ServiceNow",
+  "Hardware/software troubleshooting",
+  "Workload prioritization",
+  "Root cause analysis",
+  "Team collaboration",
+  "Technical support",
+  "Cloud Computing",
+  "Customer interaction",
+  "Windows 10",
+  "Windows 11",
+  "Citrix",
+  "SCCM",
+  "Active Directory",
+  "Incident handling",
+  "AI prompt creation",
+  "AI instructions creation",
+  "GPT chatbot creation"
+],
 
 "Intune": [
 "Device Enrollment and Provisioning",
@@ -52,7 +68,10 @@
       "company": "Mediterranean Shipping Company S.A. (MSC)",
       "city": "Turin",
       "start": "2022-04-04",
-      "end": "2025-06-14"
+      "end": "2025-06-14",
+      "tools": "Intune, ServicdNow, ConnectWise, ITIL, Autopilot",
+      "skills": "Problem-solving, Teamwork and communication, Adaptability, Root cause analysis",
+      "information": "Kasia didn't know italian before this work, first work in Italy"
     },
     {
       "position": "Technical Services Engineer",
@@ -104,7 +123,7 @@
     }
   ],
 
-  "university_courses": [
+  "university_courses selection amoug others": [
 
   "Information Technology",
   "Information Retrieval and Prompting Techniques on the Internet",
@@ -122,7 +141,7 @@
   "Digital documents Publishing and Editing "
   ],
 
-  "skills": {
+  "passions": {
     "Tea": [
       "Choosing the right tea based on mood",
       "Knowledge of less common tea types",
@@ -142,16 +161,19 @@
       "I can tell the difference between a star and a planet at night"
     ],
     "Literature": [
-      "Experimenting with writing novels and poetry"
+      "Experimenting with writing novels and poetry",
+      "I love bookstores",
+      "Favourite wrirer Erich Maria Remarque"
     ],
     "Technology": [
       "Once replaced a CPU radiator myself"
     ],
     "Cooking": [
-      "I love and know how to cook",
-      "I keep and feed my own sourdough starter",
+      "I love cooking intuitively, using recipes only as suggestions",
+      "I keep and feed my own sourdough starter for homemade bread",
       "I can bake bread",
-      "I can bake cookies"
+      "I can bake cookies",
+      "I am mixing traditional cuisine with modern approach"
     ],
     "Gardening": [
       "I've grown tomatoes, cucumbers, raspberries, strawberries, thyme, sage, rosemary, mint, avocado, onion",
