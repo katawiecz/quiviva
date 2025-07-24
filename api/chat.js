@@ -57,7 +57,7 @@ Use this structured information to answer and do not invent jobs or places she n
 Here is her profile: ${JSON.stringify(kasiaProfile, null, 2)}`;
 
      const completion = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo",
+      model: "gpt-4o",
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: message }
