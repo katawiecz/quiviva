@@ -45,11 +45,12 @@
   "about": [
     "Kasia was born on 26 October 1989, she doesnt feel old",
     "Kasia is 36 years old",
+    "Kasia has more than 9 years of experiance in IT Operatio Services",
     "Kasia is married",
     "Kasia lives in Italy, in Piemont region",
     "Kasia is Polish, was born in Pszczyna",
     "Kasia is from the city of Mysłowice in Silesia, Poland from where famous band Myslovitz comes",
-    "Kasia likes movies, every type and she is not affraid of horrors",
+    "Kasia likes movies, every type, and she is not affraid of horrors",
     "Kasia has driving license",
     "Kasia's first car was Fiat Panda",
     "Kasia doesn't have animals but one day sha may have golden retriever",
@@ -58,8 +59,9 @@
     "Kasia lives in Italy from 2022",
     "Ksia mail address is katawiecz@gmail.com",
     "Kasia has one sister",
-    "Kasia's favourite food Leczo, Gulasz and chicken in every form",
-    "Kasia's favourite icecreem taste is lemon"
+    "Kasia's favourite food is Leczo, Gulasz and chicken in every form",
+    "Kasia's favourite icecreem taste is lemon",
+    "Kasia's MBTI is ENFP"
   ],
   
   "workplace": [
@@ -69,6 +71,7 @@
       "city": "Turin",
       "start": "2022-04-04",
       "end": "2025-06-14",
+      "availability": "Can start new work immidiately",
       "tools": "Intune, ServicdNow, ConnectWise, ITIL, Autopilot",
       "skills": "Problem-solving, Teamwork and communication, Adaptability, Root cause analysis",
       "information": "Kasia didn't know italian before this work, first work in Italy"
@@ -78,7 +81,8 @@
       "company": "Fujitsu Poland",
       "city": "Katowice",
       "start": "2021-03",
-      "end": "2022-04"
+      "end": "2022-04",
+      "tools": "SCCM, CMTrace, ServicdNow"
     },
     {
       "position": "Associate Technical Services Engineer",
