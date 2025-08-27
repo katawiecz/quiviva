@@ -5,6 +5,7 @@
 
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <title>KASIA_AiCHATBOT</title>
   <script src="js/chat-ui.js" defer></script>
@@ -46,13 +47,16 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     transition: background 0.3s ease;
   }
 
   body.dark-mode {
     background: linear-gradient(135deg, #1a1a2e, #16213e);
   }
+
+  
 
   #chatbox {
     width: 100%;
@@ -133,6 +137,35 @@ html, body {
   #user-input::placeholder {
     color: #888;
   }
+
+@media (max-width: 600px) {
+  body {
+    padding: 20px 10px;
+    align-items: flex-start;
+  }
+
+  #chatbox {
+    padding: 16px;
+  }
+
+  #chat-log {
+    max-height: 250px;
+    font-size: 13px;
+  }
+
+  #user-input {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+  }
+}
+
+
 </style>
 
 </body>
