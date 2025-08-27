@@ -31,7 +31,6 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
   body {
@@ -56,41 +55,45 @@ html, body {
     background: linear-gradient(135deg, #1a1a2e, #16213e);
   }
 
-  
-
   #chatbox {
-    width: 100%;
-    max-width: 600px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-    padding: 24px;
-    color: #f0f0f0;
-    display: flex;
-    flex-direction: column;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-  #chatbox h2 {
-    margin: 0 0 16px;
-    text-align: center;
-    font-size: 24px;
-    color: #fff;
-    letter-spacing: 1px;
-  }
+ #chatbox {
+  width: 100%;
+  max-width: 600px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 24px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  color: #f0f0f0;
+}
 
-  #chat-log {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-    padding: 16px;
-    overflow-y: auto;
-    margin-bottom: 16px;
-    font-size: 14px;
-    line-height: 1.5;
-    max-height: 300px;
-    border: 1px solid rgba(255,255,255,0.2);
-  }
+#chat-log {
+  flex-grow: 1;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  border: 1px solid rgba(255,255,255,0.2);
+}
 
   .message {
     display: flex;
