@@ -55,7 +55,7 @@ module.exports = async function handler(req, res) {
   }
 
   const message = body.message;
-  let history = (body.history || []).slice(-5);
+  let history = (body.history || []).slice(-3);
   
 
   if (!message) {
