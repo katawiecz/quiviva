@@ -1,3 +1,27 @@
+/**
+ * chat.js
+ * 
+ * Ten plik to backendowy handler API (Node.js) dla mojego AI Chatbota.
+ * 
+ * Co robi:
+ * - Odbiera zapytania POST z pytaniem użytkownika (np. z index.html)
+ * - Wczytuje profil Kasia z pliku JSON (kasia-profile.json)
+ * - Tworzy prompt systemowy z tym profilem
+ * - Wysyła zapytanie do OpenAI (model GPT-4o)
+ * - Zwraca odpowiedź bota do frontendu w formacie JSON
+ * 
+ * Używany jest jako endpoint: /api/chat
+ * (np. na Vercel lub w projekcie Node.js jako middleware/serverless function)
+ * 
+ * UWAGA: To nie jest frontendowy skrypt – nie ma dostępu do DOM, inputów itd.
+ */
+
+// Autor: Kasia ✨
+// Utworzono: sierpień 2025
+// Ostatnia zmiana: 27.08.2025 – połączenie z frontendem
+
+
+
 const OpenAI = require("openai");
 const fs = require("fs");
 const path = require("path");
