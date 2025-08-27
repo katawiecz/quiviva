@@ -42,6 +42,8 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ error: "Only POST requests allowed" });
   }
 
+
+
   let body = req.body;
 
   if (typeof body === "string") {
@@ -52,7 +54,9 @@ module.exports = async function handler(req, res) {
     }
   }
 
-  const { message, history = [] } = body;
+  const message = body.message;
+  let history = (body.history || []).slice(-5);
+  
 
   if (!message) {
     return res.status(400).json({ error: "Message is missing" });
