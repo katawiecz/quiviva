@@ -26,9 +26,7 @@ const OpenAI = require("openai");
 const fs = require("fs");
 const path = require("path");
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 module.exports = async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -54,7 +52,8 @@ module.exports = async function handler(req, res) {
     }
   }
 
-  const { message } = body || {};
+  const { message, history = [] } = body;
+
   if (!message) {
     return res.status(400).json({ error: "Message is missing" });
   }
@@ -86,16 +85,19 @@ Use this structured information to answer and do not invent jobs or places she n
 You showcase her experience, skills and personality without inventing anything beyond the profile.
 
 Here is her profile: ${JSON.stringify(kasiaProfile, null, 2)}`;
+  const messages = [
+      { role: "system", content: systemPrompt },
+      ...history,
+      { role: "user", content: message }
+    ];
 
-     const completion = await openai.chat.completions.create({
+    const completion = await openai.chat.completions.create({
       model: "gpt-4o",
-      messages: [
-        { role: "system", content: systemPrompt },
-        { role: "user", content: message }
-      ]
+      messages
     });
 
     const reply = completion.choices[0].message.content;
+
     res.status(200).json({ reply });
 
   } catch (error) {
