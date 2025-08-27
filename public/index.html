@@ -27,6 +27,11 @@
 <!-- STYLE -->
 <style>
 
+/* 🧙 Reset box-sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -34,22 +39,16 @@ html, body {
 }
 
   body {
-    font-family: 'Segoe UI', sans-serif;
-    background: url("assets/img/background.png") no-repeat center center fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: scroll;
-    margin: 0;
-    padding: 40px 20px;
-    opacity: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    height: auto;
-    transition: background 0.3s ease;
-  }
+  font-family: 'Segoe UI', sans-serif;
+  background: url("assets/img/background.png") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
   body.dark-mode {
     background: linear-gradient(135deg, #1a1a2e, #16213e);
@@ -59,27 +58,14 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 100vh;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
- #chatbox {
   width: 100%;
   max-width: 600px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 0 auto;
-  padding: 24px;
-  box-sizing: border-box;
+  min-height: 80vh; /* Zamiast 100vh, żeby nie przygniatał wszystkiego */
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   border-radius: 20px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  padding: 24px;
   color: #f0f0f0;
 }
 
@@ -127,6 +113,7 @@ html, body {
   }
 
   #user-input {
+    margin-top: 12px;
     padding: 12px 16px;
     border-radius: 12px;
     border: none;
@@ -148,7 +135,8 @@ html, body {
   }
 
   #chatbox {
-    padding: 16px;
+     max-height: 300px;
+    font-size: 13px;
   }
 
   #chat-log {
