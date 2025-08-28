@@ -8,20 +8,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <title>KASIA_AiCHATBOT</title>
+
+
+
+  
+  
   <script src="js/chat-ui.js" defer></script>
 </head>
 
-<body>
 
   <!-- Chatbox -->
-  <div id="chatbox">
-    <h2>Kasia's AI Chatbot</h2>
-    <div id="chat-log"></div>
-    <input id="user-input" type="text" placeholder="Write what you would like to know about Kasia...">
+<body>
+  <div id="main-wrapper">
+    <!-- LEWA STRONA – OPIS -->
+    <section id="intro-box">
+      <div style="font-size: 1rem; color: #fff; text-align: center; background: rgba(0, 0, 0, 0.753); padding: 20px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);">
+        <div style="border: 2px solid #00ffcc; background: rgba(0, 255, 204, 0.1); padding: 16px; border-radius: 10px; margin-bottom: 20px;">
+          👾 <strong style="font-size: 1.5rem;">Kasia's CV has entered the Chat.</strong><br>
+          <span style="font-size: 1.1rem;">Literally. And she built it.</span>
+        </div>
+
+        This AI chatbot is part of Kasia Wieczorek’s fully self-made Interactive CV:<br><br>
+        Written, designed and debugged by her, with a sprinkle of AI magic.<br><br>
+        🎮 It’s not a template. It’s a passion project.<br>
+        🌍 It speaks many languages.<br>
+        🧠 It knows her experience inside out.<br><br>
+        <strong>🟢 Try asking:</strong><br><br>
+        <em>→ What’s her work style?</em><br>
+        <em>→ How does she solve complex problems?</em><br>
+        <em>→ What would surprise me about her career?</em><br>
+        <em>→ What makes her stand out as a candidate?</em>
+      </div>
+    </section>
+
+    <!-- PRAWA STRONA – CHAT -->
+    <div id="chatbox">
+      <h2>Kasia's AI Chatbot</h2>
+      <div id="chat-log"></div>
+      <input id="user-input" type="text" placeholder="Write what you would like to know about Kasia...">
+    </div>
   </div>
+
+
 
   <!-- Tryb nocny -->
   <button id="theme-toggle" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">🌓</button>
+</body>
+
 
 
 <!-- STYLE -->
@@ -53,14 +86,14 @@ html, body {
   body.dark-mode {
     background: linear-gradient(135deg, #1a1a2e, #16213e);
   }
-
-  #chatbox {
+#chatbox {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 1;
+  max-width: 900px;
   width: 100%;
-  max-width: 600px;
-  min-height: 80vh; /* Zamiast 100vh, żeby nie przygniatał wszystkiego */
+  min-height: 80vh;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   border-radius: 20px;
@@ -68,6 +101,8 @@ html, body {
   padding: 24px;
   color: #f0f0f0;
 }
+
+
 
 #chat-log {
   flex-grow: 1;
@@ -78,7 +113,7 @@ html, body {
   margin-bottom: 16px;
   font-size: 14px;
   line-height: 1.5;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.471);
 }
 
   .message {
@@ -134,10 +169,7 @@ html, body {
     align-items: flex-start;
   }
 
-  #chatbox {
-     max-height: 300px;
-    font-size: 13px;
-  }
+ 
 
   #chat-log {
     max-height: 250px;
@@ -154,6 +186,29 @@ html, body {
     height: 20px;
     margin-right: 6px;
   }
+}
+
+#main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap; 
+  gap: 40px;
+  max-width: 1600px;
+  width: 100%;
+  padding: 40px;
+  margin: 0 auto;
+
+
+#intro-box {
+  flex: 0 0 50%;
+  max-width: 50%;
+  min-width: 400px;
+}
+#chatbox {
+  flex: 0 0 45%;
+  max-width: 45%;
+  min-width: 400px;
 }
 
 

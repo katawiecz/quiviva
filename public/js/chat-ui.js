@@ -14,8 +14,6 @@
  * Ten kod działa po stronie przeglądarki (frontend, JavaScript w HTML).
  * Nie ma dostępu do Node.js, plików lokalnych ani zmiennych środowiskowych.
  * 
- * Do załączenia w HTML: 
- * <script src=\"js/chat-ui.js\" defer></script>
  * 
  * ✨ UI by Kasia ✨
  */
