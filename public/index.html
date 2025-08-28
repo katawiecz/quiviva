@@ -60,6 +60,15 @@
 
   <!-- Tryb nocny -->
   <button id="theme-toggle" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">🌓</button>
+
+
+   <!-- Scroll do telefonu -->
+  <a href="#chatbox" class="mobile-chat-hint">
+  <img src="/assets/img/chat-icon.png" alt="Chat below" />
+  <p>👇 Scroll to chat with me!</p>
+</a>
+
+
 </body>
 
 
@@ -237,36 +246,45 @@ html, body {
   }
 }
 
-/* Domyślnie ukryte */
 .mobile-chat-hint {
   display: none;
+  text-decoration: none;
 }
 
-/* Tylko na małych ekranach (telefon) */
 @media (max-width: 768px) {
   .mobile-chat-hint {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1rem;
+    justify-content: center;
+    position: relative;
+    margin: 24px auto;
     animation: bounce 2s infinite;
+    text-align: center;
   }
 
   .mobile-chat-hint img {
-    width: 48px;
-    height: 48px;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 8px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
   }
 
   .mobile-chat-hint p {
-    font-size: 0.9rem;
-    color: white;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: bold;
+    background: rgba(0,0,0,0.4);
+    padding: 6px 12px;
+    border-radius: 12px;
   }
 
   @keyframes bounce {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
+    50% { transform: translateY(-10px); }
   }
 }
+
 
 
 </style>
