@@ -52,6 +52,10 @@
     </div>
   </div>
 
+  <div class="mobile-chat-hint">
+  <img src="/assets/img/chat-icon.png" alt="Chat below" />
+  <p>Scroll down to talk with me!</p>
+</div>
 
 
   <!-- Tryb nocny -->
@@ -233,6 +237,36 @@ html, body {
   }
 }
 
+/* Domyślnie ukryte */
+.mobile-chat-hint {
+  display: none;
+}
+
+/* Tylko na małych ekranach (telefon) */
+@media (max-width: 768px) {
+  .mobile-chat-hint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    animation: bounce 2s infinite;
+  }
+
+  .mobile-chat-hint img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .mobile-chat-hint p {
+    font-size: 0.9rem;
+    color: white;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+}
 
 
 </style>
