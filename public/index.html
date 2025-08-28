@@ -197,7 +197,7 @@ html, body {
   max-width: 1600px;
   width: 100%;
   padding: 40px;
-  margin: 0 auto;
+  margin: 0 auto;}
 
 
 #intro-box {
@@ -210,6 +210,26 @@ html, body {
   max-width: 45%;
   min-width: 400px;
 }
+
+@media (max-width: 900px) {
+  #main-wrapper {
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  #intro-box,
+  #chatbox {
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #chatbox {
+    min-height: 60vh;
+  }
+}
+
 
 
 </style>
