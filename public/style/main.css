@@ -1,0 +1,236 @@
+
+/* 🧙 Reset box-sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+  body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url("../assets/img/background.png") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+  body.dark-mode {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+  }
+#chatbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  max-width: 900px;
+  width: 100%;
+  min-height: 80vh;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  padding: 24px;
+  color: #f0f0f0;
+}
+
+
+
+#chat-log {
+  flex-grow: 1;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  border: 1px solid rgba(255, 255, 255, 0.471);
+}
+
+  .message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+  .bot-icon {
+    content: url('https://cdn-icons-png.flaticon.com/512/4712/4712027.png');
+  }
+
+  .user-icon {
+    content: url('https://cdn-icons-png.flaticon.com/512/847/847969.png');
+  }
+
+  .typing {
+    font-style: italic;
+    color: #aaa;
+    animation: blink 1s step-start 0s infinite;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0.3; }
+  }
+
+  #user-input {
+    margin-top: 12px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  #user-input::placeholder {
+    color: #888;
+  }
+
+@media (max-width: 600px) {
+  body {
+    padding: 20px 10px;
+    align-items: flex-start;
+  }
+
+ 
+
+  #chat-log {
+    max-height: 250px;
+    font-size: 13px;
+  }
+
+  #user-input {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+  }
+}
+
+#main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap; 
+  gap: 40px;
+  max-width: 1600px;
+  width: 100%;
+  padding: 40px;
+  margin: 0 auto;}
+
+
+#intro-box {
+  flex: 0 0 50%;
+  max-width: 50%;
+  min-width: 400px;
+}
+#chatbox {
+  flex: 0 0 45%;
+  max-width: 45%;
+  min-width: 400px;
+}
+
+@media (max-width: 900px) {
+  #main-wrapper {
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  #intro-box,
+  #chatbox {
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #chatbox {
+    min-height: 60vh;
+  }
+}
+
+/* panel + highlight dla lewego infoboxa */
+.intro-panel{
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  background: rgba(0,0,0,0.75);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  backdrop-filter: blur(4px);
+}
+
+.intro-highlight{
+  border: 2px solid #00ffcc;
+  background: rgba(0,255,204,0.10);
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+#intro-box strong{ font-size:1.5rem; }
+#intro-box span{ font-size:1.1rem; }
+
+
+.mobile-chat-hint {
+  display: none;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-chat-hint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 24px auto;
+    animation: bounce 2s infinite;
+    text-align: center;
+  }
+
+  .mobile-chat-hint img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 8px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+  }
+
+  .mobile-chat-hint p {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: bold;
+    background: rgba(0,0,0,0.4);
+    padding: 6px 12px;
+    border-radius: 12px;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+}
+
+
+
+

@@ -1,4 +1,4 @@
-/**
+style/**
  * chat-ui.js
  * 
  * Ten plik odpowiada za frontendową logikę UI mojego AI Chatbota.
@@ -76,14 +76,27 @@ input.addEventListener("keypress", async function (e) {
     log.scrollTop = log.scrollHeight;
 
     try {
-      const response = await fetch("https://vercel-api-swart.vercel.app/api/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            message: question,
-            history: conversation })
-      });
+  // public/js/chat-ui.js
+const API_BASE = 'https://vercel-api-swart.vercel.app';
 
+async function sendMessage(message, history = []) {
+  const res = await fetch(`${API_BASE}/api/chat`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message, history })
+  });
+  if (!res.ok) {
+    const txt = await res.text().catch(()=>'');
+    throw new Error(`API ${res.status}: ${txt || res.statusText}`);
+  }
+  const data = await res.json();
+  return data.reply;
+}
+
+// (jeśli liczysz wizyty)
+async function bumpVisits() {
+  await fetch(`${API_BASE}/api/visits`, { method: 'GET' }).catch(()=>{});
+}
       
 
       const text = await response.text();
@@ -110,3 +123,14 @@ function sanitize(text) {
   div.textContent = text;
   return div.innerHTML;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const hint = document.querySelector('.mobile-chat-hint');
+  if (hint) {
+    hint.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.querySelector('#chatbox')?.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+});
+

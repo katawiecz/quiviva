@@ -1,0 +1,267 @@
+{
+
+"skills": {
+  "general": [
+    "Problem-solving",
+    "Teamwork and communication",
+    "Adaptability",
+    "Client Communication",
+    "Root cause analysis",
+    "Knowledge Base Maintenance",
+    "Workload prioritization",
+    "Windows Troubleshooting",
+    "Remote Work Tools",
+    "Agile Mindset"
+  ],
+  "technical": [
+    "Intune",
+    "ServiceNow",
+    "SCCM",
+    "Active Directory, Azure Active Directory",
+    "Hardware/software troubleshooting",
+    "Cloud Computing",
+    "AI Prompt Engineering",
+    "GPT chatbot creation"
+  ],
+  "intune_skills": [
+    "Device Enrollment and Provisioning",
+    "Windows Autopilot configuration",
+    "Bulk enrollment for corporate devices",
+    "Enrollment status page customization",
+    "Creation and assignment of configuration profiles",
+    "Device compliance policies for Windows, iOS, Android",
+    "Conditional access integration with Azure AD",
+    "Implementation of baseline security settings",
+    "App assignment via dynamic device/user groups",
+    "Troubleshooting deployment and compliance issues",
+    "Remote device actions (wipe, lock, restart)"
+  ]
+},
+
+"languages": {
+  "Polish": "native",
+  "English": "C1/C2 – fluent in writing and speaking",
+  "Italian": "B1/B2 – intermediate, communicative"
+},
+
+
+
+
+"about": [
+
+    "Kasia has more than 9 years of experience in IT Operatio Services",
+    "Kasia lives in Italy, in Piemont region",
+    "Kasia is Polish",
+    "Kasia is from Silesia region in Poland",
+    "Kasia likes movies, every type, and she is not affraid of horrors",
+    "Kasia doesn't have animals but one day sha may have golden retriever",
+    "Kasia's favourite fruits are blueberries",
+    "Kasia's favourite color is blue",
+    "Kasia has one sister",
+    "Kasia's favourite food is Leczo, Gulasz and chicken in every form",
+    "Kasia's favourite ice creem taste is lemon",
+    "Kasia's MBTI is ENFP",
+    "Kasia did ERASMUS Plus projects after University"
+
+  ],
+  
+"personality": [
+  "Curious and creative",
+  "ENFP type – energic and empathetic",
+  "Fast learner",
+  "Highly adaptive in multicultural environments",
+  "Motivated by meaning and challenges",
+  "Combines logical thinking with intuition"
+],
+
+
+  "workplace": [
+    {
+      "position": "Global Workplace Specialist",
+      "company": "Mediterranean Shipping Company S.A. (MSC)",
+      "city": "Turin",
+      "start": "2022-04-04",
+      "end": "2025-06-14",
+      "availability": "Can start new work immidiately",
+      "tools": "Intune, ServiceNow, ConnectWise, ITIL, Autopilot",
+      "skills": "Problem-solving, Teamwork and communication, Adaptability, Root cause analysis",
+      "information": "Kasia didn't know italian before this work, first work in Italy",
+      "information2": "Kasia doesn't work in Mediterranean Shipping Company S.A. (MSC) anymore. This was her last work experience"
+    },
+    {
+      "position": "Technical Services Engineer",
+      "company": "Fujitsu Poland",
+      "city": "Katowice",
+      "start": "2021-03",
+      "end": "2022-04",
+      "tools": "SCCM, CMTrace, ServiceNow"
+    },
+    {
+      "position": "Associate Technical Services Engineer",
+      "company": "Fujitsu Poland",
+      "city": "Katowice",
+      "start": "2020-02",
+      "end": "2021-03"
+    },
+    {
+      "position": "Junior Infrastructure Engineer",
+      "company": "Capgemini",
+      "city": "Katowice",
+      "start": "2019-06",
+      "end": "2020-01"
+    },
+    {
+      "position": "Service Centre Analyst",
+      "company": "Capgemini",
+      "city": "Katowice",
+      "start": "2016-05",
+      "end": "2019-05"
+    }
+  ],
+
+  "education": [
+    {
+      "type": "Master's Degree",
+      "title": "Master of Scientific Information and Library Science",
+      "institution": "University of Silesia",
+      "location": "Katowice, Poland",
+      "start": "2011-10-01",
+      "end": "2013-09-30"
+    },
+
+    {
+      "type": "Bachelor's Degree",
+      "title": "Bachelor of Scientific Information and Library Science",
+      "institution": "University of Silesia",
+      "location": "Katowice, Poland",
+      "start": "2008-10-01",
+      "end": "2011-09-30"
+    }
+  ],
+
+  "university_courses": [
+
+  "Information Technology",
+  "Information Retrieval and Prompting Techniques on the Internet",
+  "Formal Document Processing. Data Formats",
+  "Information Retrieval Languages",
+  "Information Technology ",
+  "Library Collection Management (Acquisition, Access)",
+  "Methodology of Information Technology Teaching ",
+  "Library Automation",
+  "Information Systems ",
+  "National Information Infrastructure",
+  "Information and Knowledge Society",
+  "Specialized Terminology in Information Science and Librarianship",
+  "Contemporary Research Trends in Information Science (Theory and Methodology)",
+  "Digital documents Publishing and Editing "
+  ],
+
+  "passions": {
+    "Tea": [
+      "Choosing the right tea based on mood",
+      "Knowledge of less common tea types",
+      "Ability to properly brew tea",
+      "Kasia knows some fun facts about tea, like where lapsang tea comes from",
+      "Kasia's favourite tea taste is the one she compose by herself"
+    ],
+    "Guitar": [
+      "Playing songs on guitar",
+      "Songs that Kasia can play: Simple Man (Lynyrd Skynyrd), Knockin' On Heaven's Door"
+    ],
+    "Astronomy": [
+      "Can identify the Big Dipper and Cassiopeia in the night sky",
+      "Kasia knows that there's a large nebula near Orion",
+      "Kasia knows that Europa is a moon of Jupiter",
+      "Kasia knows there's water on Europa",
+      "Kasia can tell the difference between a star and a planet at night"
+    ],
+    "Literature": [
+      "Experimenting with writing novels and poetry",
+      "Kasia  loves bookstores",
+      "Favourite writers: Erich Maria Remarque, Janusz Andrzej Zajdel",
+      "Favourite books: Life of Pi, The Book Thief, The Shining, All Quiet on the Western Front, The Lord of the Rongs, The Hunger Games, Harry Potter" 
+    ],
+    "Technology": [
+      "Once replaced a CPU radiator myself"
+    ],
+    "Cooking": [
+      "Kasia  loves cooking intuitively, using recipes only as suggestions",
+      "Kasia can bake bread",
+      "Kasia can bake cookies",
+      "Kasia is mixing traditional cuisine with modern approach"
+    ],
+    "Gardening": [
+      "Kasia has grown tomatoes, cucumbers, raspberries, strawberries, thyme, sage, rosemary, mint, avocado, onion",
+      "Kasia has her own small garden",
+      "Kasia can grow plants from seed"
+    ],
+    "Art": [
+      "Can recognize Caravaggio's works",
+      "Can take a good photo",
+      "Learning and practicing drawing",
+      "Creative writing – created and maintained my own blog"
+    ],
+    "Music": [
+      "Kasia likes to Sing solo and with others",
+      "Kasia likes learning the music theory and how to read neumes",
+      "Kasia Knows vocal ranges and how to identify them"
+    ],
+    "Travel": [
+      "Can plan trips",
+      "Not afraid of new places",
+      "Kasia enjoys meeting people and talking to strangers",
+      "Kasia has been on 3 ship crouses",
+      "Kasia has been in Jordania and visited Petra",
+      "Kasia visited Wadi-Rum desert in Jordania",
+      "Kasia visited Busteni in Romania",
+      "Kasia visited London, Barcelona, Valencia, New York, Amman, Mediolan, Warsaw, Krakow, Petra, Boston, Washington DC, Valetta, Prag, Akaba, Marsillia, Bolonia, Bergen"
+    ],
+    "Cinema": [
+      "Kasia loves to learn how to shoot a film",
+      "Participated in creating short films",
+      "Kasia's favourite director is Martin Scorsese",
+      "Short movie Kasia did on Erasmus Youth Exchange Project FILMAKER in Busteni (Romania): https://www.youtube.com/watch?v=W3UfebepLyo&t"
+    ],
+
+      "certifications": [
+  {
+    "name": "ITIL v4 Foundation",
+    "status": "in progress",
+    "provider": "PeopleCert",
+    "expected": "2025"
+  },
+  {
+    "name": "AI-900: Microsoft Azure AI Fundamentals",
+    "status": "planned"
+  }
+],
+
+"goals": [
+  "Grow as a IT/AI specialist",
+  "Work on meaningful, human-centric projects",
+  "Create accessible and beautiful tech interfaces",
+  "Blend creativity and engineering in everyday work"
+],
+
+    "projects": [
+  {
+    "title": "Interactive CV",
+    "description": "Gamified, animated online CV with AI chatbot and language selection.",
+    "technologies": ["HTML", "CSS", "JavaScript", "Node.js", "OpenAI API"],
+    "status": "in progress",
+    "link": "https://github.com/katawiecz/interactive_cv_project"
+  },
+
+  {
+    "title": "AI Chatbot API",
+    "description": "Private GPT-based assistant embedded in portfolio site.",
+    "status": "functional",
+    "link": "https://vercel-api-swart.vercel.app"
+  }
+]
+
+  }
+}
+
+
