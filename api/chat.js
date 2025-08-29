@@ -62,7 +62,7 @@ module.exports = async function handler(req, res) {
   }
 
   try {
-    const filePath = path.join(process.cwd(), "public", "kasia-profile.json");
+    const filePath = path.join(process.cwd(),"data","kasia-profile.json");
     const fileData = fs.readFileSync(filePath, "utf-8");
     const kasiaProfile = JSON.parse(fileData);
 
