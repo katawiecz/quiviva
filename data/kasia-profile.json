@@ -1,79 +1,81 @@
 {
+  "skills": {
+    "general": [
+      "Problem-solving",
+      "Teamwork and communication",
+      "Adaptability",
+      "Client communication",
+      "Root cause analysis",
+      "Knowledge base maintenance",
+      "Workload prioritization",
+      "Windows troubleshooting",
+      "Remote work tools",
+      "Agile mindset"
+    ],
+    "technical": [
+      "Intune",
+      "ServiceNow",
+      "SCCM",
+      "Active Directory, Azure Active Directory",
+      "Hardware/software troubleshooting",
+      "Cloud computing",
+      "AI prompt engineering",
+      "GPT-based chatbot creation"
+    ],
+    "intune_skills": [
+      "Device enrollment and provisioning",
+      "Windows Autopilot configuration",
+      "Bulk enrollment for corporate devices",
+      "Enrollment status page customization",
+      "Creation and assignment of configuration profiles",
+      "Device compliance policies for Windows, iOS, Android",
+      "Conditional access integration with Azure AD",
+      "Implementation of baseline security settings",
+      "App assignment via dynamic device/user groups",
+      "Troubleshooting deployment and compliance issues",
+      "Remote device actions (wipe, lock, restart)"
+    ]
+  },
 
-"skills": {
-  "general": [
-    "Problem-solving",
-    "Teamwork and communication",
-    "Adaptability",
-    "Client Communication",
-    "Root cause analysis",
-    "Knowledge Base Maintenance",
-    "Workload prioritization",
-    "Windows Troubleshooting",
-    "Remote Work Tools",
-    "Agile Mindset"
+  "languages": {
+    "Polish": "native",
+    "English": "C1/C2 – fluent in writing and speaking",
+    "Italian": "B1/B2 – intermediate, communicative"
+  },
+
+  "about": {
+    "based_in": "Italy (Piedmont)",
+    "nationality": "Polish",
+    "origin_region": "Silesia, Poland"
+  },
+
+  "preferences": {
+    "work_mode_preference": ["remote", "hybrid"],
+    "hybrid_availability": "1–2 days/week (Turin area)",
+    "relocation": false,
+    "travel": "occasional (<10%)"
+  },
+
+  "fun_facts": [
+    "More than 9 years of experience in IT Operations Services.",
+    "Lives in Italy (Piedmont).",
+    "Enjoys movies across many genres and isn't afraid of horror.",
+    "Doesn't have pets yet but would love a golden retriever one day.",
+    "Favorite fruits: blueberries.",
+    "Favorite color: blue.",
+    "Favorite foods: leczo, goulash, and chicken in many forms.",
+    "Favorite ice-cream flavor: lemon.",
+    "Participated in Erasmus+ projects after university."
   ],
-  "technical": [
-    "Intune",
-    "ServiceNow",
-    "SCCM",
-    "Active Directory, Azure Active Directory",
-    "Hardware/software troubleshooting",
-    "Cloud Computing",
-    "AI Prompt Engineering",
-    "GPT chatbot creation"
+
+  "personality": [
+    "Curious and creative",
+    "Energetic and empathetic",
+    "Fast learner",
+    "Highly adaptive in multicultural environments",
+    "Motivated by meaning and challenges",
+    "Combines logical thinking with intuition"
   ],
-  "intune_skills": [
-    "Device Enrollment and Provisioning",
-    "Windows Autopilot configuration",
-    "Bulk enrollment for corporate devices",
-    "Enrollment status page customization",
-    "Creation and assignment of configuration profiles",
-    "Device compliance policies for Windows, iOS, Android",
-    "Conditional access integration with Azure AD",
-    "Implementation of baseline security settings",
-    "App assignment via dynamic device/user groups",
-    "Troubleshooting deployment and compliance issues",
-    "Remote device actions (wipe, lock, restart)"
-  ]
-},
-
-"languages": {
-  "Polish": "native",
-  "English": "C1/C2 – fluent in writing and speaking",
-  "Italian": "B1/B2 – intermediate, communicative"
-},
-
-
-
-
-"about": [
-
-    "Kasia has more than 9 years of experience in IT Operatio Services",
-    "Kasia lives in Italy, in Piemont region",
-    "Kasia is Polish",
-    "Kasia is from Silesia region in Poland",
-    "Kasia likes movies, every type, and she is not affraid of horrors",
-    "Kasia doesn't have animals but one day sha may have golden retriever",
-    "Kasia's favourite fruits are blueberries",
-    "Kasia's favourite color is blue",
-    "Kasia has one sister",
-    "Kasia's favourite food is Leczo, Gulasz and chicken in every form",
-    "Kasia's favourite ice creem taste is lemon",
-    "Kasia's MBTI is ENFP",
-    "Kasia did ERASMUS Plus projects after University"
-
-  ],
-  
-"personality": [
-  "Curious and creative",
-  "ENFP type – energic and empathetic",
-  "Fast learner",
-  "Highly adaptive in multicultural environments",
-  "Motivated by meaning and challenges",
-  "Combines logical thinking with intuition"
-],
-
 
   "workplace": [
     {
@@ -82,11 +84,11 @@
       "city": "Turin",
       "start": "2022-04-04",
       "end": "2025-06-14",
-      "availability": "Can start new work immidiately",
+      "availability": "Can start new work immediately",
       "tools": "Intune, ServiceNow, ConnectWise, ITIL, Autopilot",
-      "skills": "Problem-solving, Teamwork and communication, Adaptability, Root cause analysis",
-      "information": "Kasia didn't know italian before this work, first work in Italy",
-      "information2": "Kasia doesn't work in Mediterranean Shipping Company S.A. (MSC) anymore. This was her last work experience"
+      "skills": "Problem-solving, teamwork and communication, adaptability, root cause analysis",
+      "information": "First job in Italy; started without Italian and learned on the job.",
+      "information2": "No longer employed at MSC; this was the most recent role."
     },
     {
       "position": "Technical Services Engineer",
@@ -128,7 +130,6 @@
       "start": "2011-10-01",
       "end": "2013-09-30"
     },
-
     {
       "type": "Bachelor's Degree",
       "title": "Bachelor of Scientific Information and Library Science",
@@ -140,128 +141,123 @@
   ],
 
   "university_courses": [
-
-  "Information Technology",
-  "Information Retrieval and Prompting Techniques on the Internet",
-  "Formal Document Processing. Data Formats",
-  "Information Retrieval Languages",
-  "Information Technology ",
-  "Library Collection Management (Acquisition, Access)",
-  "Methodology of Information Technology Teaching ",
-  "Library Automation",
-  "Information Systems ",
-  "National Information Infrastructure",
-  "Information and Knowledge Society",
-  "Specialized Terminology in Information Science and Librarianship",
-  "Contemporary Research Trends in Information Science (Theory and Methodology)",
-  "Digital documents Publishing and Editing "
+    "Information Technology",
+    "Information Retrieval and Prompting Techniques on the Internet",
+    "Formal Document Processing: Data Formats",
+    "Information Retrieval Languages",
+    "Library Collection Management (Acquisition, Access)",
+    "Methodology of Information Technology Teaching",
+    "Library Automation",
+    "Information Systems",
+    "National Information Infrastructure",
+    "Information and Knowledge Society",
+    "Specialized Terminology in Information Science and Librarianship",
+    "Contemporary Research Trends in Information Science (Theory and Methodology)",
+    "Digital Documents Publishing and Editing"
   ],
 
   "passions": {
     "Tea": [
       "Choosing the right tea based on mood",
       "Knowledge of less common tea types",
-      "Ability to properly brew tea",
-      "Kasia knows some fun facts about tea, like where lapsang tea comes from",
-      "Kasia's favourite tea taste is the one she compose by herself"
+      "Ability to brew tea properly",
+      "Knows fun facts about tea, e.g., origins of lapsang souchong",
+      "Favorite blends are the ones composed personally"
     ],
     "Guitar": [
-      "Playing songs on guitar",
-      "Songs that Kasia can play: Simple Man (Lynyrd Skynyrd), Knockin' On Heaven's Door"
+      "Plays songs on guitar",
+      "Repertoire includes: “Simple Man” (Lynyrd Skynyrd), “Knockin' on Heaven's Door”"
     ],
     "Astronomy": [
       "Can identify the Big Dipper and Cassiopeia in the night sky",
-      "Kasia knows that there's a large nebula near Orion",
-      "Kasia knows that Europa is a moon of Jupiter",
-      "Kasia knows there's water on Europa",
-      "Kasia can tell the difference between a star and a planet at night"
+      "Knows about the Orion Nebula",
+      "Knows that Europa is a moon of Jupiter and likely has water",
+      "Can tell the difference between a star and a planet at night"
     ],
     "Literature": [
-      "Experimenting with writing novels and poetry",
-      "Kasia  loves bookstores",
-      "Favourite writers: Erich Maria Remarque, Janusz Andrzej Zajdel",
-      "Favourite books: Life of Pi, The Book Thief, The Shining, All Quiet on the Western Front, The Lord of the Rongs, The Hunger Games, Harry Potter" 
+      "Experiments with writing novels and poetry",
+      "Loves bookstores",
+      "Favorite authors: Erich Maria Remarque, Janusz A. Zajdel",
+      "Favorite books: Life of Pi, The Book Thief, The Shining, All Quiet on the Western Front, The Lord of the Rings, The Hunger Games, Harry Potter"
     ],
     "Technology": [
-      "Once replaced a CPU radiator myself"
+      "Replaced a CPU cooler personally"
     ],
     "Cooking": [
-      "Kasia  loves cooking intuitively, using recipes only as suggestions",
-      "Kasia can bake bread",
-      "Kasia can bake cookies",
-      "Kasia is mixing traditional cuisine with modern approach"
+      "Loves intuitive cooking, using recipes as suggestions",
+      "Can bake bread and cookies",
+      "Mixes traditional cuisine with a modern approach"
     ],
     "Gardening": [
-      "Kasia has grown tomatoes, cucumbers, raspberries, strawberries, thyme, sage, rosemary, mint, avocado, onion",
-      "Kasia has her own small garden",
-      "Kasia can grow plants from seed"
+      "Has grown tomatoes, cucumbers, raspberries, strawberries, thyme, sage, rosemary, mint, avocado, onion",
+      "Has a small personal garden",
+      "Can grow plants from seed"
     ],
     "Art": [
       "Can recognize Caravaggio's works",
-      "Can take a good photo",
+      "Enjoys photography",
       "Learning and practicing drawing",
-      "Creative writing – created and maintained my own blog"
+      "Creative writing — created and maintained a personal blog"
     ],
     "Music": [
-      "Kasia likes to Sing solo and with others",
-      "Kasia likes learning the music theory and how to read neumes",
-      "Kasia Knows vocal ranges and how to identify them"
+      "Likes singing solo and with others",
+      "Learning music theory and how to read neumes",
+      "Knows vocal ranges and how to identify them"
     ],
     "Travel": [
-      "Can plan trips",
-      "Not afraid of new places",
-      "Kasia enjoys meeting people and talking to strangers",
-      "Kasia has been on 3 ship crouses",
-      "Kasia has been in Jordania and visited Petra",
-      "Kasia visited Wadi-Rum desert in Jordania",
-      "Kasia visited Busteni in Romania",
-      "Kasia visited London, Barcelona, Valencia, New York, Amman, Mediolan, Warsaw, Krakow, Petra, Boston, Washington DC, Valetta, Prag, Akaba, Marsillia, Bolonia, Bergen"
+      "Plans trips and enjoys meeting people",
+      "Has taken 3 ship cruises",
+      "Visited: Jordan (Petra, Wadi Rum), Romania (Bușteni), UK (London), Spain (Barcelona, Valencia), USA (New York, Boston, Washington DC), Italy (Milan, Bologna), Poland (Warsaw, Kraków), Malta (Valletta), Czechia (Prague), France (Marseille), Norway (Bergen), Jordan (Aqaba)"
     ],
     "Cinema": [
-      "Kasia loves to learn how to shoot a film",
+      "Learning how to shoot films",
       "Participated in creating short films",
-      "Kasia's favourite director is Martin Scorsese",
-      "Short movie Kasia did on Erasmus Youth Exchange Project FILMAKER in Busteni (Romania): https://www.youtube.com/watch?v=W3UfebepLyo&t"
-    ],
-
-      "certifications": [
-  {
-    "name": "ITIL v4 Foundation",
-    "status": "in progress",
-    "provider": "PeopleCert",
-    "expected": "2025"
-  },
-  {
-    "name": "AI-900: Microsoft Azure AI Fundamentals",
-    "status": "planned"
-  }
-],
-
-"goals": [
-  "Grow as a IT/AI specialist",
-  "Work on meaningful, human-centric projects",
-  "Create accessible and beautiful tech interfaces",
-  "Blend creativity and engineering in everyday work"
-],
-
-    "projects": [
-  {
-    "title": "Interactive CV",
-    "description": "Gamified, animated online CV with AI chatbot and language selection.",
-    "technologies": ["HTML", "CSS", "JavaScript", "Node.js", "OpenAI API"],
-    "status": "in progress",
-    "link": "https://github.com/katawiecz/interactive_cv_project"
+      "Favorite director: Martin Scorsese",
+      "Short movie from Erasmus Youth Exchange project in Bușteni (Romania): https://www.youtube.com/watch?v=W3UfebepLyo&t"
+    ]
   },
 
-  {
-    "title": "AI Chatbot API",
-    "description": "Private GPT-based assistant embedded in portfolio site.",
-    "status": "functional",
-    "link": "https://vercel-api-swart.vercel.app"
-  }
-]
+  "certifications": [
+    {
+      "name": "ITIL v4 Foundation",
+      "status": "in progress",
+      "provider": "PeopleCert",
+      "expected": "2025"
+    },
+    {
+      "name": "AI-900: Microsoft Azure AI Fundamentals",
+      "status": "planned"
+    }
+  ],
 
-  }
+  "goals": [
+    "Grow as an IT/AI specialist",
+    "Work on meaningful, human-centric projects",
+    "Create accessible and beautiful tech interfaces",
+    "Blend creativity and engineering in everyday work"
+  ],
+
+  "projects": [
+    {
+      "title": "Interactive CV",
+      "description": "Gamified, animated online CV with AI chatbot and language selection.",
+      "technologies": ["HTML", "CSS", "JavaScript", "Node.js", "OpenAI API"],
+      "status": "in progress",
+      "link": "https://github.com/katawiecz/interactive_cv_project"
+    },
+    {
+      "title": "AI Chatbot API",
+      "description": "Private GPT-based assistant embedded in portfolio site.",
+      "status": "functional",
+      "link": "https://vercel-api-swart.vercel.app"
+    },
+{
+  "title": "IT Portfolio Page",
+  "description": "Personal IT portfolio website presenting projects, skills and CV.",
+  "technologies": ["HTML", "CSS", "JavaScript"],
+  "status": "live",
+  "link": "https://katawiecz.github.io/IT_portfolio_by_katawiecz",
+  "repo": "https://github.com/katawiecz/IT_portfolio_by_katawiecz"
 }
-
-
+  ]
+}
