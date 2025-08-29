@@ -140,6 +140,26 @@
     "Combines logical thinking with intuition"
   ],
 
+  "work_motivation": {
+  "summary": "Motivated by meaningful work and challenging problems; blends logical thinking with intuition. Thrives in collaborative, idea-friendly teams; demotivated by micromanagement.",
+  "motivators": [
+    "Purpose and visible user impact",
+    "Autonomy with clear goals and trust",
+    "Cross-functional collaboration and knowledge sharing",
+    "Creative constraints and room for rapid prototyping",
+    "Variety and learning opportunities (new tools, domains)",
+    "Fast feedback loops and measurable outcomes"
+  ],
+  "demotivators": [
+    "Unwarranted pressure and artificial urgency (without clear rationale, priorities, or resources)",
+    "Busywork with low impact or no ownership",
+    "Opaque decisions and poor communication",
+    "No space for creativity or experimentation",
+    "Rigid processes that block improvement",
+    "Long isolation without teamwork or feedback"
+  ]
+}
+
   "workplace": [
     {
       "position": "Global Workplace Specialist",
