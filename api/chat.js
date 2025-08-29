@@ -48,6 +48,20 @@ function hasControlChars(s) {
   return /[\x00-\x08\x0E-\x1F\x7F]/.test(s);
 }
 
+// --- Simple in-memory rate limit (per IP) ---
+const RL_WINDOW_MS = 60_000; // 1 min
+const RL_MAX = 12;           // np. 12 żądań/min/IP
+const rlHits = new Map();
+function tooMany(req){
+  const ip = (req.headers['x-forwarded-for'] || req.socket.remoteAddress || '').split(',')[0].trim();
+  const now = Date.now();
+  const arr = (rlHits.get(ip) || []).filter(t => now - t < RL_WINDOW_MS);
+  arr.push(now);
+  rlHits.set(ip, arr);
+  return arr.length > RL_MAX;
+}
+
+
 // Centralna walidacja wiadomości użytkownika
 function validateMessage(input) {
   if (typeof input !== "string") {
@@ -103,6 +117,11 @@ if (req.method === "OPTIONS") {
   const ct = (req.headers["content-type"] || "").toLowerCase();
 if (!ct.includes("application/json")) {
   return res.status(415).json({ error: "Unsupported Media Type. Use application/json." });
+}
+
+if (tooMany(req)) {
+  res.setHeader('Retry-After', '60');
+  return res.status(429).json({ error: 'Too Many Requests' });
 }
 
 
