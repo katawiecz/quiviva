@@ -56,6 +56,69 @@
     "travel": "occasional (<10%)"
   },
 
+  "offer_preferences": {
+    "employment_type": ["full-time", "B2B"],
+    "seniority_level": "mid-senior",
+    "industries_preference": ["Tech", "Consulting", "Product"]
+  },
+
+  "compensation": {
+    "compensation_policy": "Share range on a screening call after scope clarification; market-aligned for EU remote.",
+    "compensation_hint": "Open to fixed salary or B2B; total compensation depends on scope and responsibility.",
+    "bonus_equity_open": true
+  },
+
+  "process": {
+    "notice_period": "Immediate",
+    "interview_availability": ["Mon–Fri 10:00–16:00 CET"],
+    "preferred_process": "Up to 2–3 stages (screening + technical + final)."
+  },
+
+  "work_authorization": {
+    "eu_citizen": true,
+    "based_in_eu": true,
+    "sponsorship_required": false
+  },
+
+  "work_environment": {
+    "working_hours": "Flexible with CET core hours 10:00–16:00",
+    "business_languages": ["Polish (native)", "English (C1/C2)", "Italian (B1/B2)"],
+    "ic_vs_manager": "individual contributor",
+    "company_size_preference": ["scale-up", "enterprise"],
+    "team_values": ["documentation-first", "SLA discipline", "constructive feedback"]
+  },
+
+  "target_roles": [
+    "Endpoint/Intune Engineer",
+    "Intune Administrator / Intune Engineer",
+    "Modern Workplace Specialist / Modern Workplace Engineer",
+    "UEM Engineer",
+    "SCCM / ConfigMgr Engineer",
+    "Azure AD / Entra ID Administrator",
+    "IT Operations Specialist (Windows) / L2–L3 Support",
+    "Infrastructure / Desktop Engineer (Enterprise)",
+    "ITSM Analyst (ServiceNow focus)",
+    "Incident & Problem Management Analyst",
+    "Operations Analyst – Enterprise IT",
+    "Knowledge Management / Technical Writer (ITSM)",
+    "AI Support Tools Specialist / AI Ops Assistant",
+    "Design Technologist",
+    "Creative Technologist",
+    "Frontend Prototyper / Client Platform Prototyper",
+    "Conversational Designer/Engineer",
+    "AI Prototyping Engineer",
+    "Developer Advocate / Developer Relations Engineer",
+    "Technical Writer / Content Designer",
+    "Community Engineer",
+    "Solutions Engineer (AI/UEM)"
+  ],
+
+  "creative_focus": [
+    "Rapid prototyping",
+    "Story-driven demos",
+    "Human-centric AI tools"
+  ],
+
   "fun_facts": [
     "More than 9 years of experience in IT Operations Services.",
     "Lives in Italy (Piedmont).",
@@ -166,7 +229,7 @@
     ],
     "Guitar": [
       "Plays songs on guitar",
-      "Repertoire includes: “Simple Man” (Lynyrd Skynyrd), “Knockin' on Heaven's Door”"
+      "Repertoire includes: \"Simple Man\" (Lynyrd Skynyrd), \"Knockin' on Heaven's Door\""
     ],
     "Astronomy": [
       "Can identify the Big Dipper and Cassiopeia in the night sky",
@@ -251,13 +314,13 @@
       "status": "functional",
       "link": "https://vercel-api-swart.vercel.app"
     },
-{
-  "title": "IT Portfolio Page",
-  "description": "Personal IT portfolio website presenting projects, skills and CV.",
-  "technologies": ["HTML", "CSS", "JavaScript"],
-  "status": "live",
-  "link": "https://katawiecz.github.io/IT_portfolio_by_katawiecz",
-  "repo": "https://github.com/katawiecz/IT_portfolio_by_katawiecz"
-}
+    {
+      "title": "IT Portfolio Page",
+      "description": "Personal IT portfolio website presenting projects, skills and CV.",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "status": "live",
+      "link": "https://katawiecz.github.io/IT_portfolio_by_katawiecz",
+      "repo": "https://github.com/katawiecz/IT_portfolio_by_katawiecz"
+    }
   ]
 }
