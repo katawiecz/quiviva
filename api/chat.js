@@ -7,7 +7,7 @@
  * - Odbiera zapytania POST z pytaniem użytkownika (np. z index.html)
  * - Wczytuje profil Kasia z pliku JSON (kasia-profile.json)
  * - Tworzy prompt systemowy z tym profilem
- * - Wysyła zapytanie do OpenAI (model GPT-4o)
+ * - Wysyła zapytanie do OpenAI (model gpt-4o-mini)
  * - Zwraca odpowiedź bota do frontendu w formacie JSON
  * 
  * Używany jest jako endpoint: /api/chat
@@ -206,11 +206,14 @@ Here is her profile: ${JSON.stringify(kasiaProfile, null, 2)}`;
       { role: "user", content: userMessage }
     ];
 
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4o",
-      messages
+      const completion = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages,
+      max_tokens: 300,     // twardy limit długości odpowiedzi
+      temperature: 0.3     // stabilniejsze, krótsze wypowiedzi
     });
 
+    
     const reply = completion.choices[0].message.content;
 
     res.status(200).json({ reply });
