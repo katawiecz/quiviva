@@ -51,7 +51,6 @@
 
   "preferences": {
     "work_mode_preference": ["remote", "hybrid"],
-    "hybrid_availability": "1–2 days/week (Turin area)",
     "relocation": false,
     "travel": "occasional (<10%)"
   },
