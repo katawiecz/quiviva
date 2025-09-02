@@ -370,7 +370,7 @@ body.dark-mode { background: linear-gradient(135deg, #1a1a2e, #16213e); }
     color: var(--cta);
     margin-bottom: 16px;
   }
-  
+
   .intro-underline {
     width: 64px;
     height: 3px;
@@ -446,3 +446,43 @@ body.dark-mode { background: linear-gradient(135deg, #1a1a2e, #16213e); }
 @media (max-width: 768px) {
   .highlights li::before { color: var(--cta); }
 }
+
+/* 0) Twardy fallback koloru tła – brak białych „mignięć” przy scrollu */
+html, body { background-color: #0b111a; }
+
+/* 1) Jeżeli przeglądarka nie wspiera backdrop-filter – użyj solidnego półmroku */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .intro-content,
+  #chatbox,
+  #chat-log {
+    background: rgba(12, 20, 28, 0.86);       /* ciemny półtransparentny */
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+}
+
+/* 2) MOBILE: wyłączamy „szkło” i fixed-owość tła, dajemy stabilne tło kart */
+@media (max-width: 900px) {
+  body { background-attachment: scroll; }     /* już masz, zostawiamy */
+
+  .intro-content,
+  #chatbox,
+  #chat-log {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(12, 20, 28, 0.88) !important; /* zero białych płatów */
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+
+  /* zapobieganie poziomemu scrollowi na małych ekranach */
+  #main-wrapper { overflow-x: hidden; }
+}
+
+/* 3) Kosmetyka: gradientowy H1 tylko na desktopie – na mobile czysty kolor */
+@media (max-width: 768px) {
+  .intro-content h1 {
+    -webkit-text-fill-color: initial;
+    background: none;
+    color: var(--cta);
+  }
+}
+
