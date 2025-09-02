@@ -291,12 +291,16 @@ body.dark-mode { background: linear-gradient(135deg, #1a1a2e, #16213e); }
 
 /* Tablety / węższe widoki */
 @media (max-width: 900px) {
-  #main-wrapper { flex-wrap: wrap; padding: 20px; }
+  body {
+    display: block;             /* zamiast flex */
+    min-height: 100vh;
+    background-attachment: scroll; /* fixed na mobile potrafi lagować i „ciągnąć” tło */
+  }
 
   #intro-box, #chatbox {
     flex: 1 1 100%;
     max-width: 100%;
-    min-width: 100%;
+    min-width: 0%;
     margin-bottom: 20px;
   }
   #chatbox { min-height: 60vh; }
@@ -348,9 +352,10 @@ body.dark-mode { background: linear-gradient(135deg, #1a1a2e, #16213e); }
 
 /* 1) Lepsza skala i gęstość tekstu */
 @media (max-width: 768px) {
-  .intro-content {
+ .intro-content {
     padding: 20px;
-    line-height: 1.45;             /* było 1.7: ciaśniej i czytelniej */
+    margin: 0 auto;
+    line-height: 1.5;
   }
 
   .intro-kicker {
@@ -360,13 +365,12 @@ body.dark-mode { background: linear-gradient(135deg, #1a1a2e, #16213e); }
   }
 
   .intro-content h1 {
-    font-size: clamp(1.6rem, 5.5vw, 2.2rem); /* płynna typografia */
+    font-size: clamp(1.6rem, 6vw, 2.1rem);
+    -webkit-text-fill-color: initial;
+    color: var(--cta);
     margin-bottom: 16px;
-    -webkit-text-fill-color: initial;        /* bez gradientu na mobile */
-    color: var(--cta);                       /* czysty kontrast */
-    font-weight: 700;
   }
-
+  
   .intro-underline {
     width: 64px;
     height: 3px;
@@ -395,7 +399,14 @@ body.dark-mode { background: linear-gradient(135deg, #1a1a2e, #16213e); }
 
 /* 2) Układ i proporcje kart – mniej “pustych połaci” */
 @media (max-width: 900px) {
-  #main-wrapper { gap: 20px; padding: 16px; }
+  #main-wrapper {
+    display: block;             /* zamiast flex na całość; pojedyncza kolumna */
+    width: 100%;
+    max-width: 720px;           /* bezpieczna kolumna na telefony+ */
+    margin: 0 auto;             /* prawdziwe centrowanie */
+    padding: 16px;              /* mniej „odpychania” krawędzi */
+    gap: 0;                     /* gap nie działa na block, więc zero konfliktów */
+  }
 
   #intro-box, #chatbox {
     border-radius: 16px;
