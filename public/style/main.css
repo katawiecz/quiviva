@@ -103,12 +103,13 @@ body.dark-mode { background: linear-gradient(135deg, #1a1a2e, #16213e); }
 }
 .highlights {
   list-style: none;
-  margin: 24px 0;
+  margin: 18px 0;
   padding: 0;
 }
 
 .highlights li {
-  margin: 10px 0;
+  margin:6px 0;
+  line-height:1.4;
   font-size: 1rem;
   padding-left: 20px;
   position: relative;
@@ -233,22 +234,19 @@ body.dark-mode { background: linear-gradient(135deg, #1a1a2e, #16213e); }
 @keyframes blink { 50% { opacity: .3; } }
 
 /* Pole input */
-#user-input {
-  margin-top: 12px;
-  padding: 12px 16px;
-  border-radius: 12px;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  background: rgba(255,255,255,0.9);
-  color: #333;
-  box-shadow: 0 2px 5px rgba(0,0,0,.2);
-}
-#user-input::placeholder { color: #888; }
 
-#user-input {
-  border: 2px solid var(--cta);
+#user-input{
+  margin-top:12px;
+  padding:12px 16px;
+  border-radius:12px;
+  font-size:16px;
+  background:rgba(255,255,255,.9);
+  color:#333;
+  box-shadow:0 2px 5px rgba(0,0,0,.2);
+  border:2px solid var(--cta);
+  outline:none;
 }
+
 
 
 /* =========================
@@ -296,7 +294,7 @@ body.dark-mode { background: linear-gradient(135deg, #1a1a2e, #16213e); }
   #intro-box, #chatbox {
     flex: 1 1 100%;
     max-width: 100%;
-    min-width: 100%;
+    min-width: 0%;
     margin-bottom: 20px;
   }
   #chatbox { min-height: 60vh; }
@@ -338,4 +336,101 @@ body.dark-mode { background: linear-gradient(135deg, #1a1a2e, #16213e); }
   padding: 0; margin: -1px; overflow: hidden;
   clip: rect(0,0,1px,1px);
   white-space: nowrap; border: 0;
+}
+
+
+/* =========================
+    MOBILE POLISH
+   ========================= */
+
+
+/* 1) Lepsza skala i gęstość tekstu */
+@media (max-width: 768px) {
+  .intro-content {
+    padding: 20px;
+    line-height: 1.45;             /* było 1.7: ciaśniej i czytelniej */
+  }
+
+  .intro-kicker {
+    font-size: .9rem;
+    letter-spacing: .8px;
+    margin-bottom: 8px;
+  }
+
+  .intro-content h1 {
+    font-size: clamp(1.6rem, 5.5vw, 2.2rem); /* płynna typografia */
+    margin-bottom: 16px;
+    -webkit-text-fill-color: initial;        /* bez gradientu na mobile */
+    color: var(--cta);                       /* czysty kontrast */
+    font-weight: 700;
+    letter-spacing:.2px;
+  }
+
+  .intro-underline {
+    width: 64px;
+    height: 3px;
+    margin: 8px 0 16px 0;
+  }
+
+  .intro-content p {
+    font-size: 1rem;         /* było 1.1rem */
+    line-height: 1.55;       /* było 1.75 */
+    color: #f5f7fa;          /* jaśniej = lepszy kontrast WCAG */
+    margin-bottom: 12px;
+  }
+
+  .highlights li {
+    font-size: .98rem;
+    margin: 8px 0;
+  }
+
+  .try-it {
+    margin-top: 16px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    color: #e9eef2;          /* mocniejszy kontrast */
+  }
+}
+
+/* 2) Układ i proporcje kart – mniej “pustych połaci” */
+@media (max-width: 900px) {
+  #main-wrapper { gap: 20px; padding: 16px; }
+
+  #intro-box, #chatbox {
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+  }
+
+  #chatbox {
+    min-height: 65vh;             /* krótszy, ale nadal wygodny */
+    padding: 16px;
+  }
+
+  #chat-log {
+    min-height: 38vh;             /* realny obszar rozmowy */
+    max-height: 48vh;             /* zapobiega “pustej studni” */
+  }
+
+  #user-input {
+    font-size: 16px;              /* Lighthouse: minimum 16px */
+    padding: 12px 14px;
+    border: 2px solid var(--cta); /* spójny akcent */
+    position: sticky;             /* zawsze pod kciukiem */
+    bottom: 8px;
+    width: 100%;
+  }
+}
+
+/* 3) Tap targets i mikrointerakcje (mobile) */
+@media (max-width: 768px) {
+  .examples li { padding: 6px 0; }         /* większe cele dotykowe */
+  .mobile-chat-hint p {
+    font-size: .95rem;
+    padding: 6px 10px;
+  }
+}
+
+/* 4) Kontrast i spójność akcentu w listach */
+@media (max-width: 768px) {
+  .highlights li::before { color: var(--cta); }
 }
