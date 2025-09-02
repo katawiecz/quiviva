@@ -20,7 +20,7 @@ html, body {
   --panel-bg: rgba(0, 0, 0, 0.70);
   --panel-bg-soft: rgba(255, 255, 255, 0.08);
   --text: #f0f0f0;
-  --muted: #ccc;
+  --muted: #bbb;
   --accent: #9cdcf5;      /* obwódki, linki */
   --cta: #00ffcc;         /* nagłówki akcentowe */
   --shadow-strong: 0 8px 30px rgba(0,0,0,.30);
@@ -70,7 +70,7 @@ body.dark-mode { background: linear-gradient(135deg, #1a1a2e, #16213e); }
   background: rgba(255,255,255,0.10); /* spójne z chat */
   backdrop-filter: blur(20px);
   color: var(--text);
-  line-height: 1.7;
+  line-height: 1.5;
   padding: 32px;
   border-radius: 20px;
   box-shadow: var(--shadow-strong);
@@ -79,19 +79,28 @@ body.dark-mode { background: linear-gradient(135deg, #1a1a2e, #16213e); }
 }
 
 .intro-content h1 {
-  font-size: 2rem;
+  font-size: 2.6rem;          /* większy, wyróżnia główny tytuł */
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--cta), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* efekt gradientowego napisu */
+  margin-bottom: 24px;
+}
+
+.intro-content h2 {
+  font-size: 1.6rem;
   font-weight: 600;
-  margin: 0 0 20px 0;
-  color: var(--cta);              /* turkusowy akcent */
-  letter-spacing: 0.5px;
+  color: var(--accent);
+  margin-top: 24px;
+  margin-bottom: 12px;
 }
 
 .intro-content p {
-  margin: 0 0 16px 0;
-  font-size: 1.05rem;
-  color: var(--text);
+  margin: 0 0 18px 0;
+  font-size: 1.1rem;
+  color: #f8f9fa;              
+  line-height: 1.45;
 }
-
 .highlights {
   list-style: none;
   margin: 24px 0;
@@ -109,7 +118,7 @@ body.dark-mode { background: linear-gradient(135deg, #1a1a2e, #16213e); }
   content: "▸";                   /* zamiast kropki – strzałka */
   position: absolute;
   left: 0;
-  color: var(--accent);           /* jasny akcent */
+  color: var(--cta);
   font-size: 1.1rem;
 }
 
@@ -148,6 +157,24 @@ body.dark-mode { background: linear-gradient(135deg, #1a1a2e, #16213e); }
   border-radius: 10px;
   margin-bottom: 20px;
 }
+
+.intro-kicker {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.intro-underline {
+  width: 80px;
+  height: 4px;
+  background: var(--cta);
+  margin: 12px 0 24px 0;
+  border-radius: 2px;
+}
+
 #intro-box strong { font-size: 1.5rem; }
 #intro-box span   { font-size: 1.1rem; }
 
@@ -180,7 +207,7 @@ body.dark-mode { background: linear-gradient(135deg, #1a1a2e, #16213e); }
   padding: 16px;
   margin-bottom: 16px;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.4;
   border: 1px solid rgba(255,255,255,0.45);
 }
 
@@ -218,6 +245,11 @@ body.dark-mode { background: linear-gradient(135deg, #1a1a2e, #16213e); }
   box-shadow: 0 2px 5px rgba(0,0,0,.2);
 }
 #user-input::placeholder { color: #888; }
+
+#user-input {
+  border: 2px solid var(--cta);
+}
+
 
 /* =========================
    5) Komponenty pomocnicze
