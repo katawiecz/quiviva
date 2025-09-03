@@ -82,7 +82,7 @@ body.dark-mode { background: linear-gradient(135deg, #1a1a2e, #16213e); }
   font-size: 2.6rem;          /* większy, wyróżnia główny tytuł */
   font-weight: 700;
   background: linear-gradient(90deg, var(--cta), var(--accent));
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent; /* efekt gradientowego napisu */
   margin-bottom: 24px;
 }
@@ -462,7 +462,9 @@ html, body { background-color: #0b111a; }
 
 /* 2) MOBILE: wyłączamy „szkło” i fixed-owość tła, dajemy stabilne tło kart */
 @media (max-width: 900px) {
-  body { background-attachment: scroll; }     /* już masz, zostawiamy */
+  body { background-attachment: scroll;
+  background-size: cover;
+ }     
 
   .intro-content,
   #chatbox,
