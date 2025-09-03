@@ -488,3 +488,32 @@ html, body { background-color: #0b111a; }
   }
 }
 
+/* --- Stała warstwa tła dla całej strony --- */
+body::before{
+  content:"";
+  position: fixed;          /* stabilne na mobile, zamiast background-attachment */
+  inset: 0;
+  z-index: -1;
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Upewnij się, że nie przykrywamy tła nieprzezroczystą płytą */
+.intro-content,
+#chatbox,
+#chat-log{
+  /* półprzezroczyste, żeby widać było grafikę; zero bieli */
+  background: rgba(8, 16, 24, 0.60);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: none;           /* bez niestabilnego blur na mobile */
+}
+
+/* Na mobile nie używamy 'fixed' na background body – i tak mamy warstwę before */
+@media (max-width: 900px){
+  body{ background-attachment: scroll; }
+}
+
