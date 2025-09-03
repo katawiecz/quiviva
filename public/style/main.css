@@ -502,7 +502,7 @@ body::before{
   transform: translateZ(0);
 }
 
-/* Upewnij się, że nie przykrywamy tła nieprzezroczystą płytą */
+
 .intro-content,
 #chatbox,
 #chat-log{
@@ -512,8 +512,61 @@ body::before{
   backdrop-filter: none;           /* bez niestabilnego blur na mobile */
 }
 
-/* Na mobile nie używamy 'fixed' na background body – i tak mamy warstwę before */
+
 @media (max-width: 900px){
   body{ background-attachment: scroll; }
 }
 
+/* --- Ikonki --- */
+
+.social-icons {
+  position: absolute;
+  bottom: 40px;
+  left: 90%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px;
+}
+
+.social-icons a {
+  font-size: 40px;
+  color: rgb(254, 254, 254);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #0800ff; 
+}
+
+.social-strip{
+  display:flex; align-items:center; gap:16px;
+  margin-top:16px;
+  padding:12px 14px;
+  border-radius:12px;
+  background: rgba(0,0,0,.35);
+  backdrop-filter: none;
+}
+
+.si{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:40px; height:40px; border-radius:50%;
+  color:#eaf6ff; background: rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  transition: transform .2s ease, box-shadow .2s ease, color .2s ease, background .2s ease;
+}
+.si:hover{ transform: translateY(-2px) scale(1.05); box-shadow:0 6px 18px rgba(0,255,204,.25); color:#00ffcc; background: rgba(255,255,255,.1); }
+
+.cv-btn{
+  margin-left:auto;
+  padding:10px 14px;
+  border-radius:10px;
+  border:1px solid #00ffcc;
+  color:#0a1a22; background:#00ffcc;
+  font-weight:600; text-decoration:none;
+  transition: filter .2s ease, transform .2s ease;
+}
+.cv-btn:hover{ filter: brightness(1.05); transform: translateY(-1px); }
+
+/* Umiejscowienie – pod czatem, pełna szerokość kolumny */
+#chatbox + .social-strip{ width:100%; }
