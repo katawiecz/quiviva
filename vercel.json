@@ -3,7 +3,7 @@
     {
       "source": "/assets/cv/(.*)\\.pdf",
       "headers": [
-        { "key": "Content-Disposition", "value": "attachment; filename=\"ENCVKatarzyna Wieczorek.pdf\"" },
+        { "key": "Content-Disposition", "value": "attachment; filename=\"CV_EN_Katarzyna_Wieczorek.pdf\"" },
         { "key": "Content-Type", "value": "application/pdf" },
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" },
@@ -14,7 +14,7 @@
   "redirects": [
     {
       "source": "/download-cv",
-      "destination": "ENCVKatarzyna Wieczorek.pdf",
+      "destination": "CV_EN_Katarzyna_Wieczorek.pdf",
       "permanent": false
     }
   ]
