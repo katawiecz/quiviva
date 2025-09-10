@@ -41,7 +41,8 @@ body {
 }
 
 /* Dark mode – alternatywa tła (jeśli używasz przełącznika) */
-body.dark-mode { background: linear-gradient(135deg, #1a1a2e, #16213e); }
+body.dark-mode { 
+  background: linear-gradient(135deg, #000000, #000000); }
 
 /* Główny kontener dwóch kolumn */
 #main-wrapper {
