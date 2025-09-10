@@ -1,6 +1,10 @@
-/* =========================
-   0) Reset i podstawy
-   ========================= */
+/* ==========================================================================
+   0) RESET & BASE STYLES
+   --------------------------------------------------------------------------
+   - Normalize box-sizing for consistent layout calculations
+   - Remove default margin/padding on root elements
+   - Set a modern, legible system font stack
+   ========================================================================== */
 *,
 *::before,
 *::after { box-sizing: border-box; }
@@ -12,24 +16,31 @@ html, body {
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
-/* =========================
-   1) Zmienne (łatwa zmiana motywu)
-   ========================= */
+/* ==========================================================================
+   1) THEME VARIABLES (TOKENS)
+   --------------------------------------------------------------------------
+   Centralized variables for background, colors, and shadows.
+   Change values here to reskin the entire app with minimal edits.
+   ========================================================================== */
 :root {
   --bg-image: url("../assets/img/background.jpg");
-  --panel-bg: rgba(0, 0, 0, 0.70);
-  --panel-bg-soft: rgba(255, 255, 255, 0.08);
-  --text: #f0f0f0;
-  --muted: #bbb;
-  --accent: #9cdcf5;      /* obwódki, linki */
-  --cta: #00ffcc;         /* nagłówki akcentowe */
+  --panel-bg: rgba(0, 0, 0, 0.70);            /* generic dark overlay for panels */
+  --panel-bg-soft: rgba(255, 255, 255, 0.08); /* soft translucent overlay */
+  --text: #f0f0f0;                            /* primary foreground text */
+  --muted: #bbb;                              /* secondary/muted text */
+  --accent: #9cdcf5;                          /* borders, subtle links/highlights */
+  --cta: #00ffcc;                             /* call-to-action and emphasis */
   --shadow-strong: 0 8px 30px rgba(0,0,0,.30);
   --shadow-soft:   0 4px 20px rgba(0,0,0,.40);
 }
 
-/* =========================
-   2) Tło strony i layout root
-   ========================= */
+/* ==========================================================================
+   2) GLOBAL LAYOUT & BACKGROUND
+   --------------------------------------------------------------------------
+   - Fullscreen background image (fixed) with cover sizing
+   - Center the main content with flexbox
+   - Use theme text color across the page
+   ========================================================================== */
 body {
   background: var(--bg-image) no-repeat center center fixed;
   background-size: cover;
@@ -40,11 +51,12 @@ body {
   color: var(--text);
 }
 
-/* Dark mode – alternatywa tła (jeśli używasz przełącznika) */
-body.dark-mode { 
-  background: linear-gradient(135deg, #000000, #000000); }
+/* Optional dark mode background (if you implement a theme toggle) */
+body.dark-mode {
+  background: linear-gradient(135deg, #000000, #000000);
+}
 
-/* Główny kontener dwóch kolumn */
+/* Two-column wrapper: left (intro) + right (chat) */
 #main-wrapper {
   display: flex;
   justify-content: center;
@@ -57,37 +69,41 @@ body.dark-mode {
   margin: 0 auto;
 }
 
-/* =========================
-   3) Kolumna lewa – intro / opis
-   ========================= */
+/* ==========================================================================
+   3) LEFT COLUMN — INTRO / ABOUT
+   --------------------------------------------------------------------------
+   Contains: main intro card, headings, highlights list, "Try it" callout.
+   ========================================================================== */
 #intro-box {
   flex: 0 0 50%;
   max-width: 50%;
   min-width: 400px;
 }
 
-/* Panel treści – główna „karta” po lewej */
+/* Main content card (glassmorphism) */
 .intro-content {
-  background: rgba(255,255,255,0.10); /* spójne z chat */
+  background: rgba(255,255,255,0.10);  /* consistent with chat look */
   backdrop-filter: blur(20px);
   color: var(--text);
   line-height: 1.5;
   padding: 32px;
   border-radius: 20px;
   box-shadow: var(--shadow-strong);
-  max-width: 700px;              /* lepsza czytelność */
-  margin: 0 auto;                /* wyśrodkowanie */
+  max-width: 700px;   /* improved readability on large screens */
+  margin: 0 auto;     /* center within the column */
 }
 
+/* Primary headline with gradient fill */
 .intro-content h1 {
-  font-size: 2.6rem;          /* większy, wyróżnia główny tytuł */
+  font-size: 2.6rem;  /* emphasize top-level hierarchy */
   font-weight: 700;
   background: linear-gradient(90deg, var(--cta), var(--accent));
   background-clip: text;
-  -webkit-text-fill-color: transparent; /* efekt gradientowego napisu */
+  -webkit-text-fill-color: transparent;
   margin-bottom: 24px;
 }
 
+/* Section headline */
 .intro-content h2 {
   font-size: 1.6rem;
   font-weight: 600;
@@ -96,45 +112,46 @@ body.dark-mode {
   margin-bottom: 12px;
 }
 
+/* Intro paragraphs */
 .intro-content p {
   margin: 0 0 18px 0;
   font-size: 1.1rem;
-  color: #f8f9fa;              
+  color: #f8f9fa;
   line-height: 1.45;
 }
+
+/* Highlights list — custom arrows for bullets */
 .highlights {
   list-style: none;
   margin: 24px 0;
   padding: 0;
 }
-
 .highlights li {
   margin: 10px 0;
   font-size: 1rem;
   padding-left: 20px;
   position: relative;
 }
-
 .highlights li::before {
-  content: "▸";                   /* zamiast kropki – strzałka */
+  content: "▸";            /* arrow marker instead of dot */
   position: absolute;
   left: 0;
   color: var(--cta);
   font-size: 1.1rem;
 }
 
+/* "Try it" callout panel (examples/instructions) */
 .try-it {
   margin-top: 28px;
   padding: 16px 20px;
   border-radius: 12px;
-  background: rgba(8, 16, 24, 0.78) !important;
+  background: rgba(8, 16, 24, 0.78) !important;   /* darker for readability */
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
   color: #dbe7ef !important;
   font-style: normal;
   font-size: 0.95rem;
   color: var(--muted);
 }
-
 .try-it strong {
   display: block;
   margin-bottom: 10px;
@@ -143,7 +160,7 @@ body.dark-mode {
   font-size: 1.05rem;
 }
 
-/* Opcjonalny panel highlight (jeśli używasz) */
+/* Optional extra informational panel */
 .intro-panel {
   text-align: center;
   background: var(--panel-bg-soft);
@@ -160,6 +177,7 @@ body.dark-mode {
   margin-bottom: 20px;
 }
 
+/* Small pre-title (kicker) and underline decoration */
 .intro-kicker {
   font-size: 1.1rem;
   font-weight: 500;
@@ -168,7 +186,6 @@ body.dark-mode {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
 .intro-underline {
   width: 80px;
   height: 4px;
@@ -177,12 +194,15 @@ body.dark-mode {
   border-radius: 2px;
 }
 
+/* Additional inline typography */
 #intro-box strong { font-size: 1.5rem; }
 #intro-box span   { font-size: 1.1rem; }
 
-/* =========================
-   4) Kolumna prawa – chat
-   ========================= */
+/* ==========================================================================
+   4) RIGHT COLUMN — CHAT
+   --------------------------------------------------------------------------
+   Contains: chat container, scrollable chat log, typing indicator, input.
+   ========================================================================== */
 #chatbox {
   display: flex;
   flex-direction: column;
@@ -200,22 +220,20 @@ body.dark-mode {
   color: var(--text);
 }
 
-/* Wnętrze logu chatu */
+/* Scrollable message history */
 #chat-log {
   flex-grow: 1;
   overflow-y: auto;
-  background: var(--panel-bg-soft);
+  background: rgba(6, 12, 18, 0.86) !important; /* darker than container for contrast */
   border-radius: 12px;
   padding: 16px;
   margin-bottom: 16px;
   font-size: 14px;
   line-height: 1.4;
   border: 1px solid rgba(255,255,255,0.45);
-  background: rgba(6, 12, 18, 0.86) !important;
 }
 
-
-/* Pojedyncza wiadomość (wiersz) */
+/* Single message row (icon + text) */
 .message {
   display: flex;
   align-items: flex-start;
@@ -223,12 +241,12 @@ body.dark-mode {
   margin-bottom: 10px;
 }
 
-/* Ikony (user/bot) */
+/* Sender icons (bot/user) */
 .icon { width: 24px; height: 24px; flex-shrink: 0; }
 .bot-icon  { content: url('https://cdn-icons-png.flaticon.com/512/4712/4712027.png'); }
 .user-icon { content: url('https://cdn-icons-png.flaticon.com/512/847/847969.png'); }
 
-/* „Bot is typing…” */
+/* Typing indicator animation */
 .typing {
   font-style: italic;
   color: #aaa;
@@ -236,12 +254,12 @@ body.dark-mode {
 }
 @keyframes blink { 50% { opacity: .3; } }
 
-/* Pole input */
+/* User input field */
 #user-input {
   margin-top: 12px;
   padding: 12px 16px;
   border-radius: 12px;
-  border: none;
+  border: 2px solid var(--cta);   /* keep brand accent */
   outline: none;
   font-size: 16px;
   background: rgba(255,255,255,0.9);
@@ -250,21 +268,17 @@ body.dark-mode {
 }
 #user-input::placeholder { color: #888; }
 
-#user-input {
-  border: 2px solid var(--cta);
-}
-
-
-/* =========================
-   5) Komponenty pomocnicze
-   ========================= */
-/* Link „scroll to chat” – domyślnie ukryty na desktopie */
+/* ==========================================================================
+   5) UTILITY COMPONENTS
+   --------------------------------------------------------------------------
+   Small helpers: scroll hint (mobile only) and a floating theme toggle.
+   ========================================================================== */
 .mobile-chat-hint {
   display: none;
   text-decoration: none;
 }
 
-/* Pływający przełącznik trybu – przeniesiony z inline */
+/* Floating theme toggle button (fixed position) */
 .floating-toggle {
   position: fixed;
   top: 20px;
@@ -280,11 +294,15 @@ body.dark-mode {
 }
 .floating-toggle:hover { background: rgba(0,0,0,.65); }
 
-/* =========================
-   6) Responsywność
-   ========================= */
+/* ==========================================================================
+   6) RESPONSIVE DESIGN (BREAKPOINTS)
+   --------------------------------------------------------------------------
+   - <600px: phones — reduce font sizes and constrain chat log height
+   - <900px: tablets/smaller laptops — switch to single-column layout
+   - <768px: enable scroll hint and minor UI tweaks
+   ========================================================================== */
 
-/* Małe telefony */
+/* Phones */
 @media (max-width: 600px) {
   body { padding: 20px 10px; align-items: flex-start; }
 
@@ -293,12 +311,12 @@ body.dark-mode {
   .icon { width: 20px; height: 20px; }
 }
 
-/* Tablety / węższe widoki */
+/* Tablets / smaller laptops */
 @media (max-width: 900px) {
   body {
-    display: block;             /* zamiast flex */
+    display: block;                 /* replace global flex with block flow */
     min-height: 100vh;
-    background-attachment: scroll; /* fixed na mobile potrafi lagować i „ciągnąć” tło */
+    background-attachment: scroll;  /* fixed backgrounds can lag on mobile */
   }
 
   #intro-box, #chatbox {
@@ -310,7 +328,7 @@ body.dark-mode {
   #chatbox { min-height: 60vh; }
 }
 
-/* Hint przewijania – włącz na mobile */
+/* Scroll hint — shown only on mobile */
 @media (max-width: 768px) {
   .mobile-chat-hint {
     display: flex;
@@ -337,9 +355,12 @@ body.dark-mode {
   }
 }
 
-/* =========================
-   7) Dostępność (A11y)
-   ========================= */
+/* ==========================================================================
+   7) ACCESSIBILITY (A11Y)
+   --------------------------------------------------------------------------
+   Utility class for screen-reader-only content:
+   - Hidden visually, still accessible to assistive tech.
+   ========================================================================== */
 .visually-hidden {
   position: absolute !important;
   width: 1px; height: 1px;
@@ -348,15 +369,18 @@ body.dark-mode {
   white-space: nowrap; border: 0;
 }
 
+/* ==========================================================================
+   8) MOBILE POLISH — UX/READABILITY IMPROVEMENTS
+   --------------------------------------------------------------------------
+   Additional tweaks for touch devices:
+   - Adjust typography and paddings
+   - Reduce motion/blur where needed
+   - Keep input reachable and visible
+   ========================================================================== */
 
-/* =========================
-    MOBILE POLISH
-   ========================= */
-
-
-/* 1) Lepsza skala i gęstość tekstu */
+/* 8.1) Better text scale/density on mobile */
 @media (max-width: 768px) {
- .intro-content {
+  .intro-content {
     padding: 20px;
     margin: 0 auto;
     line-height: 1.5;
@@ -382,9 +406,9 @@ body.dark-mode {
   }
 
   .intro-content p {
-    font-size: 1rem;         /* było 1.1rem */
-    line-height: 1.55;       /* było 1.75 */
-    color: #f5f7fa;          /* jaśniej = lepszy kontrast WCAG */
+    font-size: 1rem;       /* slightly smaller paragraphs on phones */
+    line-height: 1.55;
+    color: #f5f7fa;        /* a tad brighter for WCAG contrast */
     margin-bottom: 12px;
   }
 
@@ -397,19 +421,19 @@ body.dark-mode {
     margin-top: 16px;
     padding: 12px 14px;
     border-radius: 10px;
-    color: #e9eef2;          /* mocniejszy kontrast */
+    color: #e9eef2;        /* stronger contrast on mobile */
   }
 }
 
-/* 2) Układ i proporcje kart – mniej “pustych połaci” */
+/* 8.2) Single-column layout and practical card heights */
 @media (max-width: 900px) {
   #main-wrapper {
-    display: block;             /* zamiast flex na całość; pojedyncza kolumna */
+    display: block;         /* single-column flow */
     width: 100%;
-    max-width: 720px;           /* bezpieczna kolumna na telefony+ */
-    margin: 0 auto;             /* prawdziwe centrowanie */
-    padding: 16px;              /* mniej „odpychania” krawędzi */
-    gap: 0;                     /* gap nie działa na block, więc zero konfliktów */
+    max-width: 720px;       /* comfortable reading width for phones+ */
+    margin: 0 auto;         /* real centering */
+    padding: 16px;          /* less edge padding */
+    gap: 0;                 /* gap is irrelevant for block layout */
   }
 
   #intro-box, #chatbox {
@@ -418,72 +442,81 @@ body.dark-mode {
   }
 
   #chatbox {
-    min-height: 65vh;             /* krótszy, ale nadal wygodny */
+    min-height: 65vh;
     padding: 16px;
   }
 
   #chat-log {
-    min-height: 38vh;             /* realny obszar rozmowy */
-    max-height: 48vh;             /* zapobiega “pustej studni” */
+    min-height: 38vh;
+    max-height: 48vh;       /* avoid “bottomless well” on small screens */
   }
 
   #user-input {
-    font-size: 16px;              /* Lighthouse: minimum 16px */
+    font-size: 16px;        /* Lighthouse: min 16px for touch targets */
     padding: 12px 14px;
-    border: 2px solid var(--cta); /* spójny akcent */
-    position: sticky;             /* zawsze pod kciukiem */
+    border: 2px solid var(--cta);
+    position: sticky;       /* keep input reachable while scrolling */
     bottom: 8px;
     width: 100%;
   }
 }
 
-/* 3) Tap targets i mikrointerakcje (mobile) */
+/* 8.3) Touch target sizes & micro-interactions */
 @media (max-width: 768px) {
-  .examples li { padding: 6px 0; }         /* większe cele dotykowe */
+  .examples li { padding: 6px 0; } /* larger tap targets */
   .mobile-chat-hint p {
     font-size: .95rem;
     padding: 6px 10px;
   }
 }
 
-/* 4) Kontrast i spójność akcentu w listach */
+/* 8.4) Bullet color consistency on mobile */
 @media (max-width: 768px) {
   .highlights li::before { color: var(--cta); }
 }
 
-/* 0) Twardy fallback koloru tła – brak białych „mignięć” przy scrollu */
+/* ==========================================================================
+   9) FALLBACKS & FIXED BACKGROUND LAYER
+   --------------------------------------------------------------------------
+   - Solid color fallback to prevent white flashes during scroll
+   - No-backdrop-filter support: use solid semi-opaque panels
+   - Fixed ::before background layer for stability on mobile
+   ========================================================================== */
+
+/* Solid fallback background (prevents flashing on scroll) */
 html, body { background-color: #0b111a; }
 
-/* 1) Jeżeli przeglądarka nie wspiera backdrop-filter – użyj solidnego półmroku */
+/* If backdrop-filter is not supported, use solid, semi-opaque panels */
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   .intro-content,
   #chatbox,
   #chat-log {
-    background: rgba(12, 20, 28, 0.86);       /* ciemny półtransparentny */
+    background: rgba(12, 20, 28, 0.86);    /* stable dark surface */
     border: 1px solid rgba(255,255,255,0.06);
   }
 }
 
-/* 2) MOBILE: wyłączamy „szkło” i fixed-owość tła, dajemy stabilne tło kart */
+/* Mobile: disable glass effect and fixed background to avoid jank */
 @media (max-width: 900px) {
-  body { background-attachment: scroll;
-  background-size: cover;
- }     
+  body {
+    background-attachment: scroll;
+    background-size: cover;
+  }
 
   .intro-content,
   #chatbox,
   #chat-log {
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
-    background: rgba(12, 20, 28, 0.88) !important; /* zero białych płatów */
+    background: rgba(12, 20, 28, 0.88) !important; /* fully stable card */
     border: 1px solid rgba(255,255,255,0.07);
   }
 
-  /* zapobieganie poziomemu scrollowi na małych ekranach */
+  /* Prevent accidental horizontal scrolling on narrow viewports */
   #main-wrapper { overflow-x: hidden; }
 }
 
-/* 3) Kosmetyka: gradientowy H1 tylko na desktopie – na mobile czysty kolor */
+/* Desktop → keep gradient H1; Mobile → plain color for clarity */
 @media (max-width: 768px) {
   .intro-content h1 {
     -webkit-text-fill-color: initial;
@@ -492,10 +525,10 @@ html, body { background-color: #0b111a; }
   }
 }
 
-/* --- Stała warstwa tła dla całej strony --- */
+/* Fixed background layer behind all content (smooth on mobile) */
 body::before{
   content:"";
-  position: fixed;          /* stabilne na mobile, zamiast background-attachment */
+  position: fixed;
   inset: 0;
   z-index: -1;
   background-image: var(--bg-image);
@@ -503,26 +536,31 @@ body::before{
   background-position: center;
   background-size: cover;
   will-change: transform;
-  transform: translateZ(0);
+  transform: translateZ(0); /* GPU hint for smoother scrolling */
 }
 
-
+/* Global darkening of cards for better legibility on image backgrounds */
 .intro-content,
 #chatbox,
 #chat-log{
-  /* półprzezroczyste, żeby widać było grafikę; zero bieli */
-  background: rgba(8, 16, 24, 0.82) !important;
+  background: rgba(8, 16, 24, 0.82) !important;     /* overall darker surface */
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  backdrop-filter: none;           /* bez niestabilnego blur na mobile */
+  backdrop-filter: none; /* avoid unstable blur on mobile */
 }
-
 
 @media (max-width: 900px){
   body{ background-attachment: scroll; }
 }
 
-/* --- Ikonki --- */
+/* ==========================================================================
+   10) SOCIAL ICONS & ACTIONS
+   --------------------------------------------------------------------------
+   - Floating social icons group (optional)
+   - Social strip bar under chat
+   - Download CV button styling
+   ========================================================================== */
 
+/* Optional floating social icons (bottom-right-ish) */
 .social-icons {
   position: absolute;
   bottom: 40px;
@@ -531,18 +569,17 @@ body::before{
   display: flex;
   gap: 30px;
 }
-
 .social-icons a {
   font-size: 40px;
   color: rgb(254, 254, 254);
   transition: transform 0.3s ease, color 0.3s ease;
 }
-
 .social-icons a:hover {
   transform: scale(1.2);
-  color: #0800ff; 
+  color: #0800ff;
 }
 
+/* Horizontal social/action strip placed under the chat container */
 .social-strip{
   display:flex; align-items:center; gap:16px;
   margin-top:16px;
@@ -552,6 +589,7 @@ body::before{
   backdrop-filter: none;
 }
 
+/* Single circular social icon button */
 .si{
   display:inline-flex; align-items:center; justify-content:center;
   width:40px; height:40px; border-radius:50%;
@@ -559,8 +597,13 @@ body::before{
   border:1px solid rgba(255,255,255,.12);
   transition: transform .2s ease, box-shadow .2s ease, color .2s ease, background .2s ease;
 }
-.si:hover{ transform: translateY(-2px) scale(1.05); box-shadow:0 6px 18px rgba(0,255,204,.25); color:#00ffcc; background: rgba(255,255,255,.1); }
+.si:hover{
+  transform: translateY(-2px) scale(1.05);
+  box-shadow:0 6px 18px rgba(0,255,204,.25);
+  color:#00ffcc; background: rgba(255,255,255,.1);
+}
 
+/* Prominent CV download button (aligned to the right of the strip) */
 .cv-btn{
   margin-left:auto;
   padding:10px 14px;
@@ -572,5 +615,5 @@ body::before{
 }
 .cv-btn:hover{ filter: brightness(1.05); transform: translateY(-1px); }
 
-/* Umiejscowienie – pod czatem, pełna szerokość kolumny */
+/* Ensure the action strip spans full column width under the chat box */
 #chatbox + .social-strip{ width:100%; }

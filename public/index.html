@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!--
+    Character encoding and document title
+    - UTF-8 supports all languages/symbols.
+    - Title kept concise; consider adding brand/role keywords for SEO.
+  -->
   <meta charset="UTF-8" />
   <title>Kasia – AI Chatbot CV</title>
+
+  <!--
+    Responsive viewport
+    - Ensures proper scaling on mobile/desktop.
+  -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Favicon (cache-busted with ?v=1) -->
   <link rel="icon" href="/chat.ico?v=1" type="image/x-icon" />
+
+  <!--
+    Font Awesome CSS (CDN)
+    NOTE: Your CSP currently allows style-src 'self' 'unsafe-inline' only,
+    so this CDN stylesheet may be blocked. If you rely on it, add the domain:
+      style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
+    You are using inline SVG icons below, so this link might be optional.
+  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- CSP (meta). Docelowo najlepiej też jako nagłówek serwera -->
+  <!--
+    Content Security Policy (CSP) via meta
+    - Prefer setting CSP as an HTTP response header (more robust) in production.
+    - default-src 'self' locks everything down to same-origin unless whitelisted.
+    - frame-ancestors 'none' prevents clickjacking by disallowing iframes.
+    - upgrade-insecure-requests auto-upgrades http→https where possible.
+    - img-src allows local, data URLs, and specific icon CDN.
+    - script-src allows self and analytics (counter.dev).
+    - style-src allows self and inline styles (for small tweaks).
+    - connect-src limits fetch/XHR/WebSocket targets to your API.
+    TODO: If you keep the Font Awesome CDN stylesheet, whitelist its domain in style-src.
+  -->
   <meta http-equiv="Content-Security-Policy"
         content="
           default-src 'self';
@@ -19,95 +50,176 @@
           connect-src 'self' https://vercel-api-swart.vercel.app
         ">
 
-  <!-- Referrer policy -->
+  <!--
+    Referrer Policy
+    - Reduces referrer info leaked on cross-origin requests.
+    Also consider server headers:
+      Referrer-Policy: strict-origin-when-cross-origin
+      X-Content-Type-Options: nosniff
+      X-Frame-Options: DENY (or use CSP frame-ancestors)
+      Permissions-Policy: camera=(), microphone=(), geolocation=()
+  -->
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <!-- (Nagłówki serwerowe też warto dodać: X-Content-Type-Options:nosniff, Referrer-Policy itd.) -->
 
-  <!-- Preload CSS dla lepszego FCP -->
+  <!--
+    Performance: Preload critical CSS
+    - Preload helps First Contentful Paint (FCP).
+    - The actual stylesheet link must still follow to apply styles.
+  -->
   <link rel="preload" href="style/main.css" as="style" />
   <link rel="stylesheet" href="style/main.css" />
 
-  <!-- Analytics po CSP -->
+  <!--
+    Privacy-friendly Analytics (counter.dev)
+    - async so it doesn't block rendering
+    - data-id identifies your site; data-utcoffset sets local offset
+    CSP: script-src includes https://cdn.counter.dev
+  -->
   <script async src="https://cdn.counter.dev/script.js"
           data-id="66ed9fdc-81a4-4454-a67a-74cb8155bf92"
           data-utcoffset="2"></script>
 
+  <!--
+    App script (defer)
+    - defer ensures the script runs after parsing the HTML
+    - Good for performance and avoiding DOMContentLoaded race conditions
+  -->
   <script src="js/chat-ui.js" defer></script>
+
+  <!--
+    (Optional SEO/OpenGraph)
+    Consider adding:
+      <meta name="description" content="Interactive AI chatbot CV for Kasia (Katarzyna) Wieczorek — multilingual, recruiter-ready, built with Node.js & Vercel.">
+      <meta property="og:title" content="Kasia – AI Chatbot CV">
+      <meta property="og:description" content="Ask questions and get multilingual, recruiter-style answers grounded in verified profile data.">
+      <meta property="og:image" content="https://www.kasiaaichatbot.me/assets/img/preview.png">
+      <meta property="og:url" content="https://www.kasiaaichatbot.me">
+      <meta name="twitter:card" content="summary_large_image">
+  -->
 </head>
 
-
 <body>
+  <!--
+    Floating theme toggle (UI affordance)
+    - ARIA label for screen readers
+  -->
   <button id="theme-toggle" class="floating-toggle" aria-label="Toggle dark mode">🌓</button>
 
+  <!--
+    Main landmark
+    - Helps assistive tech jump directly to primary content.
+  -->
   <main id="main-wrapper" role="main">
+    <!--
+      Intro section
+      - aria-labelledby ties the section to the H1 for accessible naming.
+    -->
     <section id="intro-box" aria-labelledby="intro-title">
-  <div class="intro-content">
-    <div class="intro-kicker">Product-style portfolio</div>
-    <h1 id="intro-title">Interactive CV powered by AI</h1>
-    <div class="intro-underline" aria-hidden="true"></div>
+      <div class="intro-content">
+        <!-- Small kicker / category label -->
+        <div class="intro-kicker">Product-style portfolio</div>
 
-    <p>This project is a fully self-developed showcase of Kasia (Katarzyna) Wieczorek’s professional journey,
-      designed and implemented with modern web technologies and AI.</p>
-    <p>Unlike a static PDF, this interactive CV lets you explore Kasia’s experience and skills through a conversational interface.</p>
+        <!-- Page-level H1 (unique within the document) -->
+        <h1 id="intro-title">Interactive CV powered by AI</h1>
 
-    <ul class="highlights">
-      <li>Multilingual answers in the language you ask.</li>
-      <li>Knowledge-driven: built from verified career data.</li>
-      <li>Interactive: ask recruiter-style questions.</li>
-    </ul>
+        <!-- Decorative underline (hidden from AT) -->
+        <div class="intro-underline" aria-hidden="true"></div>
 
-    <div class="try-it">
-      <strong>Try asking:</strong>
-      <ul class="examples">
-        <li>What is her work style?</li>
-        <li>How does she solve complex problems?</li>
-        <li>What makes her stand out as a candidate?</li>
-      </ul>
-    </div>
-  </div>
-</section>
+        <!-- Intro copy: concise value proposition -->
+        <p>This project is a fully self-developed showcase of Kasia (Katarzyna) Wieczorek’s professional journey,
+          designed and implemented with modern web technologies and AI.</p>
+        <p>Unlike a static PDF, this interactive CV lets you explore Kasia’s experience and skills through a conversational interface.</p>
 
-  <a href="#chatbox" class="mobile-chat-hint">
-    <p>👇 Scroll down to chat with me!</p>
-  </a>
+        <!-- Feature highlights (keep items short for scannability) -->
+        <ul class="highlights">
+          <li>Multilingual answers in the language you ask.</li>
+          <li>Knowledge-driven: built from verified career data.</li>
+          <li>Interactive: ask recruiter-style questions.</li>
+        </ul>
 
+        <!-- Example prompts callout -->
+        <div class="try-it">
+          <strong>Try asking:</strong>
+          <ul class="examples">
+            <li>What is her work style?</li>
+            <li>How does she solve complex problems?</li>
+            <li>What makes her stand out as a candidate?</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      Mobile-only skip link / hint
+      - Encourages users to jump to the chat section on small screens.
+      - Styling shows/hides this via media queries.
+    -->
+    <a href="#chatbox" class="mobile-chat-hint">
+      <p>👇 Scroll down to chat with me!</p>
+    </a>
+
+    <!--
+      Chat section
+      - aria-labelledby ties to H2
+      - Chat log uses aria-live for dynamic updates
+    -->
     <section id="chatbox" aria-labelledby="chat-heading">
+      <!-- Section heading (H2) for structure -->
       <h2 id="chat-heading">Kasia's AI Chatbot</h2>
+
+      <!--
+        Live region for chat messages
+        - aria-live="polite": announcements won't interrupt the user
+        - aria-atomic="false": only changed parts are announced
+      -->
       <div id="chat-log" aria-live="polite" aria-atomic="false"></div>
 
-      
+      <!--
+        Text input for user prompts
+        - autocomplete off to reduce noisy suggestions
+        - inputmode="text" hints mobile keyboards (plain text)
+        Consider adding aria-label or associating a visible <label> if needed.
+      -->
       <input id="user-input" type="text" placeholder="Ask here..." autocomplete="off" inputmode="text" />
 
-<div class="social-strip" aria-label="Social and downloads">
-  <a class="si" href="https://github.com/katawiecz" target="_blank" rel="noopener" aria-label="GitHub">
-    <!-- GitHub SVG -->
-    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor"
-      d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.09-.74.09-.74 1.2.09 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.77-1.6-2.67-.31-5.48-1.34-5.48-5.97 0-1.32.47-2.4 1.23-3.25-.12-.3-.53-1.55.12-3.22 0 0 1-.32 3.3 1.24a11.5 11.5 0 0 1 6 0c2.3-1.56 3.3-1.24 3.3-1.24.65 1.67.24 2.92.12 3.22.76.85 1.23 1.93 1.23 3.25 0 4.64-2.81 5.65-5.49 5.96.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.83.57A12 12 0 0 0 12 .5Z"/></svg>
-  </a>
+      <!--
+        Social/action strip: icon links + CV download
+        - Uses inline SVG (no external icon font needed)
+        - Each link has rel="noopener" for security with target="_blank"
+      -->
+      <div class="social-strip" aria-label="Social and downloads">
+        <a class="si" href="https://github.com/katawiecz" target="_blank" rel="noopener" aria-label="GitHub">
+          <!-- GitHub SVG (decorative icon; accessible name comes from aria-label on <a>) -->
+          <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor"
+            d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.09-.74.09-.74 1.2.09 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.77-1.6-2.67-.31-5.48-1.34-5.48-5.97 0-1.32.47-2.4 1.23-3.25-.12-.3-.53-1.55.12-3.22 0 0 1-.32 3.3 1.24a11.5 11.5 0 0 1 6 0c2.3-1.56 3.3-1.24 3.3-1.24.65 1.67.24 2.92.12 3.22.76.85 1.23 1.93 1.23 3.25 0 4.64-2.81 5.65-5.49 5.96.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.83.57A12 12 0 0 0 12 .5Z"/></svg>
+        </a>
 
-  <a class="si" href="https://www.linkedin.com/in/katarzyna-wieczorek-personalprofile/" target="_blank" rel="noopener" aria-label="LinkedIn">
-    <!-- LinkedIn SVG -->
-    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor"
-      d="M20.45 20.45h-3.56v-5.6c0-1.34-.02-3.06-1.86-3.06-1.86 0-2.15 1.45-2.15 2.96v5.7H9.32V9h3.41v1.56h.05c.47-.88 1.63-1.8 3.35-1.8 3.58 0 4.24 2.36 4.24 5.43v6.26ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
-  </a>
+        <a class="si" href="https://www.linkedin.com/in/katarzyna-wieczorek-personalprofile/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <!-- LinkedIn SVG -->
+          <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor"
+            d="M20.45 20.45h-3.56v-5.6c0-1.34-.02-3.06-1.86-3.06-1.86 0-2.15 1.45-2.15 2.96v5.7H9.32V9h3.41v1.56h.05c.47-.88 1.63-1.8 3.35-1.8 3.58 0 4.24 2.36 4.24 5.43v6.26ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+        </a>
 
-  <a class="si" href="https://codepen.io/Katarzyna-Wieczorek" target="_blank" rel="noopener" aria-label="CodePen">
-    <!-- CodePen SVG -->
-    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor"
-      d="M12 2 1 8v8l11 6 11-6V8L12 2Zm7.5 9.2-3.3-2.2v-2l5.3 3.2-2 1Zm-9-5.5 3 1.7v2.3L12 11 8.5 9.7V7.4l2-1.1ZM3.2 10.4l5.3-3.2v2l-3.3 2.2-2-1ZM8.5 14.3 12 13l3.5 1.3v2.3l-3 1.7-3-1.7v-2.3Zm10-1.7 3.3 2.2-5.3 3.2v-2l2-1.2v-2.2ZM5.5 13.6l2 1.2v2l-5.3-3.2 3.3-2.2v2.2Z"/></svg>
-  </a>
+        <a class="si" href="https://codepen.io/Katarzyna-Wieczorek" target="_blank" rel="noopener" aria-label="CodePen">
+          <!-- CodePen SVG -->
+          <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor"
+            d="M12 2 1 8v8l11 6 11-6V8L12 2Zm7.5 9.2-3.3-2.2v-2l5.3 3.2-2 1Zm-9-5.5 3 1.7v2.3L12 11 8.5 9.7V7.4l2-1.1ZM3.2 10.4l5.3-3.2v2l-3.3 2.2-2-1ZM8.5 14.3 12 13l3.5 1.3v2.3l-3 1.7-3-1.7v-2.3Zm10-1.7 3.3 2.2-5.3 3.2v-2l2-1.2v-2.2ZM5.5 13.6l2 1.2v2l-5.3-3.2 3.3-2.2v2.2Z"/></svg>
+        </a>
 
-
-  <a class="cv-btn" href="/assets/cv/CV_EN_Katarzyna_Wieczorek.pdf" download>
-  Download CV (PDF)
-</a>
-
-</div>
-
+        <!-- Primary call to action: CV download (local asset) -->
+        <a class="cv-btn" href="/assets/cv/CV_EN_Katarzyna_Wieczorek.pdf" download>
+          Download CV (PDF)
+        </a>
+      </div>
     </section>
   </main>
 
-
+  <!--
+    (Optional) NoScript fallback:
+    If JavaScript is disabled, offer a link to the PDF or a basic contact method.
+    <noscript>
+      <p>This interactive CV requires JavaScript. You can still <a href="/assets/cv/CV_EN_Katarzyna_Wieczorek.pdf">download the PDF</a>.</p>
+    </noscript>
+  -->
 </body>
-
 </html>

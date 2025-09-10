@@ -1,33 +1,34 @@
 /**
- * chat.js
+ * chat.js – Backend API handler for Kasia's AI Chatbot
+ * ----------------------------------------------------
+ * Responsibilities:
+ * - Accepts POST requests from the frontend with a user question.
+ * - Validates and sanitizes input (length, content type, no HTML).
+ * - Loads Kasia's profile from JSON (kasia-profile.json).
+ * - Constructs a system prompt embedding Kasia’s profile data.
+ * - Calls OpenAI (gpt-4o-mini) with conversation context.
+ * - Returns the assistant’s reply in JSON format to the client.
  * 
- * Ten plik to backendowy handler API (Node.js) dla mojego AI Chatbota.
+ * Endpoint: /api/chat
+ * Usage: Deployed on Vercel as a serverless function, or in Node.js middleware.
  * 
- * Co robi:
- * - Odbiera zapytania POST z pytaniem użytkownika (np. z index.html)
- * - Wczytuje profil Kasia z pliku JSON (kasia-profile.json)
- * - Tworzy prompt systemowy z tym profilem
- * - Wysyła zapytanie do OpenAI (model gpt-4o-mini)
- * - Zwraca odpowiedź bota do frontendu w formacie JSON
- * 
- * Używany jest jako endpoint: /api/chat
- * (np. na Vercel lub w projekcie Node.js jako middleware/serverless function)
- * 
- * UWAGA: To nie jest frontendowy skrypt – nie ma dostępu do DOM, inputów itd.
+ * ⚠️ Note: This is backend-only code. It does not access DOM, inputs, or UI.
  */
 
-// Autor: Kasia ✨
-// Utworzono: sierpień 2025
-
-
-
+// ----------------------------------------------------
+// Imports & Initialization
+// ----------------------------------------------------
 const OpenAI = require("openai");
 const fs = require("fs");
 const path = require("path");
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-// --- CORS allowlist ---
+// ----------------------------------------------------
+// CORS Allowlist
+// ----------------------------------------------------
+// Only these origins are allowed to call the API.
+// Helps prevent abuse from unauthorized websites.
 const ALLOWED_ORIGINS = new Set([
   "https://kasiaaichatbot.me",
   "https://www.kasiaaichatbot.me",
@@ -35,25 +36,34 @@ const ALLOWED_ORIGINS = new Set([
   "http://127.0.0.1:5500"
 ]);
 
-  // --- INPUT LIMITS & HELPERS ---
-const MAX_MESSAGE_LEN = 1000; // możesz zmienić np. na 1200
+// ----------------------------------------------------
+// Input Limits & Validation Helpers
+// ----------------------------------------------------
+const MAX_MESSAGE_LEN = 1000; // Max allowed length of a user message
 
-// HTML heurystyka: wykrywa prawdopodobne tagi (<p>, <script>, <!-- -->, itp.)
+// Detects potential HTML markup (basic heuristic)
 function isProbablyHtml(s) {
   return /<\s*[a-z!][^>]*>/i.test(s);
 }
 
-// Znaki kontrolne/binarki (poza dozwolonymi \n \r \t)
+// Detects disallowed control characters (except \n \r \t)
 function hasControlChars(s) {
   return /[\x00-\x08\x0E-\x1F\x7F]/.test(s);
 }
 
-// --- Simple in-memory rate limit (per IP) ---
-const RL_WINDOW_MS = 60_000; // 1 min
-const RL_MAX = 12;           // np. 12 żądań/min/IP
+// ----------------------------------------------------
+// Simple In-Memory Rate Limiter (per IP)
+// ----------------------------------------------------
+// - Window: 1 minute
+// - Max requests: 12 per minute per IP
+// NOTE: This resets when the serverless function is re-deployed.
+const RL_WINDOW_MS = 60_000;
+const RL_MAX = 12;
 const rlHits = new Map();
-function tooMany(req){
-  const ip = (req.headers['x-forwarded-for'] || req.socket.remoteAddress || '').split(',')[0].trim();
+
+function tooMany(req) {
+  const ip = (req.headers['x-forwarded-for'] || req.socket.remoteAddress || '')
+    .split(',')[0].trim();
   const now = Date.now();
   const arr = (rlHits.get(ip) || []).filter(t => now - t < RL_WINDOW_MS);
   arr.push(now);
@@ -61,8 +71,9 @@ function tooMany(req){
   return arr.length > RL_MAX;
 }
 
-
-// Centralna walidacja wiadomości użytkownika
+// ----------------------------------------------------
+// Centralized Message Validation
+// ----------------------------------------------------
 function validateMessage(input) {
   if (typeof input !== "string") {
     return { ok: false, status: 400, error: "Invalid 'message' type. Expected string." };
@@ -88,82 +99,87 @@ function validateMessage(input) {
   return { ok: true, value: message };
 }
 
+// ----------------------------------------------------
+// Main API Handler
+// ----------------------------------------------------
 module.exports = async function handler(req, res) {
+  // --- CORS Handling ---
+  const origin = req.headers.origin || "";
+  if (ALLOWED_ORIGINS.has(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+  } else {
+    // Default fallback (can also reject with 403 if stricter)
+    res.setHeader("Access-Control-Allow-Origin", "https://kasiaaichatbot.me");
+  }
+  res.setHeader("Vary", "Origin");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
 
-const origin = req.headers.origin || "";
-if (ALLOWED_ORIGINS.has(origin)) {
-  res.setHeader("Access-Control-Allow-Origin", origin);
-} else {
-  // fallback (możesz też zamiast tego zwrócić 403)
-  res.setHeader("Access-Control-Allow-Origin", "https://kasiaaichatbot.me");
-}
-res.setHeader("Vary", "Origin");
-res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  // Echo requested headers back if present
+  const reqHeaders = req.headers["access-control-request-headers"];
+  res.setHeader("Access-Control-Allow-Headers", reqHeaders || "Content-Type");
 
-// Jeśli przeglądarka pyta o niestandardowe nagłówki, odbij je z powrotem
-const reqHeaders = req.headers["access-control-request-headers"];
-res.setHeader("Access-Control-Allow-Headers", reqHeaders || "Content-Type");
+  // Handle preflight request
+  if (req.method === "OPTIONS") {
+    res.status(204).end(); // No Content
+    return;
+  }
 
-// Preflight
-if (req.method === "OPTIONS") {
-  res.status(204).end(); // No Content
-  return;
-}
-
+  // --- Method & Content-Type Validation ---
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Only POST requests allowed" });
   }
 
   const ct = (req.headers["content-type"] || "").toLowerCase();
-if (!ct.includes("application/json")) {
-  return res.status(415).json({ error: "Unsupported Media Type. Use application/json." });
-}
+  if (!ct.includes("application/json")) {
+    return res.status(415).json({ error: "Unsupported Media Type. Use application/json." });
+  }
 
-if (tooMany(req)) {
-  res.setHeader('Retry-After', '60');
-  return res.status(429).json({ error: 'Too Many Requests' });
-}
+  // --- Rate Limiting ---
+  if (tooMany(req)) {
+    res.setHeader('Retry-After', '60');
+    return res.status(429).json({ error: 'Too Many Requests' });
+  }
 
-
+  // --- Parse Body ---
   let body = req.body;
-
   if (typeof body === "string") {
     try {
       body = JSON.parse(body);
-    } catch (e) {
+    } catch {
       return res.status(400).json({ error: "Invalid JSON" });
     }
   }
 
+  // --- Prepare Conversation History ---
+  const MAX_HISTORY_ITEMS = 3;
+  const rawHistory = Array.isArray(body?.history) ? body.history : [];
+  const history = rawHistory
+    .slice(-MAX_HISTORY_ITEMS)
+    .map(h => {
+      const role = h?.role;
+      const content = typeof h?.content === "string" ? h.content : "";
+      const v = validateMessage(content);
+      return (role === "user" || role === "assistant") && v.ok
+        ? { role, content: v.value }
+        : null;
+    })
+    .filter(Boolean);
 
-
-const MAX_HISTORY_ITEMS = 3;
-const rawHistory = Array.isArray(body?.history) ? body.history : [];
-const history = rawHistory
-  .slice(-MAX_HISTORY_ITEMS)
-  .map(h => {
-    const role = h?.role;
-    const content = typeof h?.content === "string" ? h.content : "";
-    const v = validateMessage(content); 
-    return (role === "user" || role === "assistant") && v.ok
-      ? { role, content: v.value }
-      : null;
-  })
-  .filter(Boolean);
-
-
+  // --- Validate Current User Message ---
   const vm = validateMessage(body?.message);
-if (!vm.ok) {
-  return res.status(vm.status).json({ error: vm.error });
-}
-const userMessage = vm.value;
-
-
+  if (!vm.ok) {
+    return res.status(vm.status).json({ error: vm.error });
+  }
+  const userMessage = vm.value;
 
   try {
-    const filePath = path.join(process.cwd(),"data","kasia-profile.json");
+    // --- Load Kasia's Profile from JSON ---
+    const filePath = path.join(process.cwd(), "data", "kasia-profile.json");
     const fileData = fs.readFileSync(filePath, "utf-8");
     const kasiaProfile = JSON.parse(fileData);
+
+    // --- Build System Prompt ---
+    // Embeds profile data and enforces chatbot behavior rules
 
     const systemPrompt = `You are an AI chatbot embedded in an interactive CV.  
 You speak on behalf of Kasia Wieczorek, a real person whose profile you know.  
@@ -211,28 +227,30 @@ Use this structured information to answer and do not invent jobs or places she n
 You showcase her experience, skills and personality without inventing anything beyond the profile.
 
 Here is her profile: ${JSON.stringify(kasiaProfile, null, 2)}`;
-  const messages = [
+
+    // Final conversation messages
+    const messages = [
       { role: "system", content: systemPrompt },
       ...history,
       { role: "user", content: userMessage }
     ];
 
-      const completion = await openai.chat.completions.create({
+    // --- Call OpenAI Chat Completion API ---
+    const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages,
-      max_tokens: 300,     // twardy limit długości odpowiedzi
-      temperature: 0.3     // stabilniejsze, krótsze wypowiedzi
+      max_tokens: 300,  // Hard limit on reply length
+      temperature: 0.3  // Lower = more concise, stable answers
     });
-
 
     const reply = completion.choices[0].message.content;
 
+    // --- Respond to Client ---
     res.status(200).json({ reply });
 
   } catch (error) {
-    console.error("❌ Błąd w handlerze:", error);
+    console.error("❌ Handler error:", error);
     res.setHeader("Content-Type", "application/json");
     res.status(500).json({ error: "Internal server error", details: error.message });
   }
 };
-
