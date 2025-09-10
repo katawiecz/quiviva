@@ -18,8 +18,8 @@ Unlike a static CV PDF, this chatbot lets you **ask questions directly** and get
 - Live: [https://www.kasiaaichatbot.me](https://www.kasiaaichatbot.me)  
 - Screenshot:  
 
-  ![Demo Screenshot](./public/assets/img/background.png)  
-  *(replace with GIF of short conversation: Q → A)*  
+  ![Demo Screenshot](./public/assets/img/screenshot.png)  
+ 
 
 ---
 
@@ -92,8 +92,9 @@ echo "ALLOWED_ORIGIN=http://localhost:3000" >> .env
 
 # Run with Vercel dev (if installed globally)
 vercel dev
+```
 
-🧪 How to Test
+## 🧪 How to Test
 
 Open localhost
  (or your Vercel preview).
@@ -104,7 +105,7 @@ Expect clear, structured answers based on kasia-profile.json.
 
 Fantasy trigger words (e.g. “Gandalf”, “magia”, “Thor”) enable Easter Egg mode.
 
-📦 Tech Highlights
+##  📦 Tech Highlights
 
 HTTP & CORS – safe request/response handling.
 
@@ -116,7 +117,7 @@ Fetch – error handling with fallbacks.
 
 File System – profile JSON served as static asset.
 
-🤝 Work with Me
+##  🤝 Work with Me
 
 This project is published under a Non-Commercial license.
 
@@ -128,7 +129,7 @@ This project is published under a Non-Commercial license.
 
 📧 Email: katawieczo@gmail.com
 
-🔏 License
+##  🔏 License
 
 Code is under Non-Commercial license.
 Non-code assets (images, texts, CV) are under CC BY-NC 4.0.
