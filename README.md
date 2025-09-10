@@ -27,7 +27,6 @@ Unlike a static CV PDF, this chatbot lets you **ask questions directly** and get
 - 🌍 **Multilingual answers** – detects the question’s language (EN/PL/IT).  
 - 📑 **Profile-driven** – grounded in `kasia-profile.json` data.  
 - 🧑‍💼 **Recruiter-friendly tone** – structured, concise, professional.  
-- 🧙 **Easter Egg mode** – nerdy Gandalf/Yoda responses for fantasy keywords.  
 - 🔒 **Secure serverless backend** – API key only on server, never exposed to client.  
 
 ---
