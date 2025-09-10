@@ -16,7 +16,7 @@ html, body {
    1) Zmienne (łatwa zmiana motywu)
    ========================= */
 :root {
-  --bg-image: url("../assets/img/background.png");
+  --bg-image: url("../assets/img/background.jpg");
   --panel-bg: rgba(0, 0, 0, 0.70);
   --panel-bg-soft: rgba(255, 255, 255, 0.08);
   --text: #f0f0f0;
@@ -127,8 +127,9 @@ body.dark-mode {
   margin-top: 28px;
   padding: 16px 20px;
   border-radius: 12px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(8, 16, 24, 0.78) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  color: #dbe7ef !important;
   font-style: normal;
   font-size: 0.95rem;
   color: var(--muted);
@@ -210,7 +211,9 @@ body.dark-mode {
   font-size: 14px;
   line-height: 1.4;
   border: 1px solid rgba(255,255,255,0.45);
+  background: rgba(6, 12, 18, 0.86) !important;
 }
+
 
 /* Pojedyncza wiadomość (wiersz) */
 .message {
@@ -508,8 +511,8 @@ body::before{
 #chatbox,
 #chat-log{
   /* półprzezroczyste, żeby widać było grafikę; zero bieli */
-  background: rgba(8, 16, 24, 0.60);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(8, 16, 24, 0.82) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
   backdrop-filter: none;           /* bez niestabilnego blur na mobile */
 }
 
