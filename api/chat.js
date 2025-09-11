@@ -124,6 +124,14 @@ module.exports = async function handler(req, res) {
     return;
   }
 
+  // --- Application-level authentication ---
+// Ensure that only requests including the correct server token are processed.
+// This is not a replacement for user auth, but prevents random abuse of the API.
+const clientToken = req.headers["x-app-auth"];
+if (!clientToken || clientToken !== process.env.SERVER_API_TOKEN) {
+  return res.status(401).json({ error: "Unauthorized" });
+}
+
   // --- Method & Content-Type Validation ---
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Only POST requests allowed" });
@@ -254,3 +262,4 @@ Here is her profile: ${JSON.stringify(kasiaProfile, null, 2)}`;
     res.status(500).json({ error: "Internal server error", details: error.message });
   }
 };
+

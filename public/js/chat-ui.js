@@ -13,6 +13,12 @@
 
 const API_BASE = "https://vercel-api-swart.vercel.app"; // Backend deployed on Vercel
 
+
+// This is a *public* app-level token to reduce random abuse.
+// It MUST match SERVER_API_TOKEN set in Vercel Project Settings.
+// ⚠️ It is NOT a secret (it’s shipped to the browser).
+const APP_AUTH = "7f8a9d2e1b3c4x5y6zRandomSecretTokenHere";
+
 let conversation = []; // Holds conversation turns; only the last 3 are sent to the API
 
 /**
@@ -66,10 +72,16 @@ document.addEventListener("DOMContentLoaded", () => {
    * @param {Array} history  - Slice of recent conversation turns
    * @returns {Promise<string>} Bot reply
    */
+
+
+  
   async function sendMessage(message, history = []) {
     const res = await fetch(`${API_BASE}/api/chat`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+        headers: {
+      "Content-Type": "application/json",
+      "x-app-auth": APP_AUTH, 
+    },
       body: JSON.stringify({ message, history })
     });
 
@@ -81,6 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const data = await res.json();
     return data.reply;
   }
+
+  
 
   /**
    * Optional: trigger the visits counter endpoint.
