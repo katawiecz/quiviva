@@ -134,3 +134,5 @@ Code is under Non-Commercial license.
 Non-code assets (images, texts, CV) are under CC BY-NC 4.0.
 For details see [LICENSE](./LICENSE) and [LICENSE-COMMERCIAL.md](./LICENSE-COMMERCIAL.md).
 
+Cheers!!!
+
