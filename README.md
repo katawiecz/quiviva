@@ -1,3 +1,19 @@
+<!-- Build status (GitHub Actions) -->
+![Build Status](https://img.shields.io/github/actions/workflow/status/katawiecz/vercel-api/node.js.yml?branch=main)
+
+<!-- Deployment na Vercel -->
+[![Made with Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://vercel.com/)
+
+<!-- Powered by OpenAI -->
+![Powered by OpenAI](https://img.shields.io/badge/Powered%20by-OpenAI-412991?logo=openai&logoColor=white)
+
+<!-- License -->
+![License](https://img.shields.io/github/license/katawiecz/vercel-api)
+
+<!-- GitHub stars -->
+![GitHub Repo stars](https://img.shields.io/github/stars/katawiecz/vercel-api?style=social)
+
+
 # AI Chatbot Demo – kasiaaichatbot.me
 
 [![Status](https://img.shields.io/badge/status-active-brightgreen)](#)
