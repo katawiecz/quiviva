@@ -1,13 +1,12 @@
 # AI Chatbot CV – kasiaaichatbot.me  
 
-[![Made with Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://vercel.com/)  
-![Powered by OpenAI](https://img.shields.io/badge/Powered%20by-OpenAI-412991?logo=openai&logoColor=white)  
-![License](https://img.shields.io/github/license/katawiecz/vercel-api)  
-![GitHub Repo stars](https://img.shields.io/github/stars/katawiecz/vercel-api?style=social)  
-
-[![Status](https://img.shields.io/badge/status-active-brightgreen)](#)  
-[![Built with](https://img.shields.io/badge/built%20with-HTML%2FCSS%2FJS%20%2B%20Node.js-informational)](#)  
-[![Contest](https://img.shields.io/badge/ForTheLoveOfCode-2025-magenta)](#)  
+[![Made with Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://vercel.com/) 
+![Powered by OpenAI](https://img.shields.io/badge/Powered%20by-OpenAI-412991?logo=openai&logoColor=white) 
+![License](https://img.shields.io/github/license/katawiecz/vercel-api) 
+![GitHub Repo stars](https://img.shields.io/github/stars/katawiecz/vercel-api?style=social) 
+![Status](https://img.shields.io/badge/status-active-brightgreen) 
+![Built with](https://img.shields.io/badge/built%20with-HTML%2FCSS%2FJS%20%2B%20Node.js-informational) 
+![ForTheLoveOfCode](https://img.shields.io/badge/ForTheLoveOfCode-2025-magenta)
 
 ---
 
@@ -47,7 +46,7 @@ This is only the beginning — my head is still buzzing with concepts, brainstor
 
 ## 🚀 Features  
 
-- 🌍 **Multilingual answers** – detects input in EN/PL/IT.  
+- 🌍 **Multilingual answers** – detects input in your language.  
 - 📑 **Profile-driven** – grounded in `kasia-profile.json` data.  
 - 🧑‍💼 **Recruiter-friendly tone** – concise, professional, structured.  
 - 🔒 **Secure serverless backend** – API key hidden safely on the server.  
@@ -116,7 +115,7 @@ vercel dev
 ## 🧪 How to Test  
 
 Open on localhost or in your Vercel preview.  
-Ask questions in English, Polish, or Italian.  
+Ask questions in English, Polish, Italian or other language. 
 Expect concise, recruiter-friendly answers.  
 Drop in fantasy words like “Gandalf” or “Thor” to see the Easter Egg mode in action.  
 
