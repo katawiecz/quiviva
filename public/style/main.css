@@ -1,10 +1,7 @@
+
 /* ==========================================================================
    0) RESET & BASE STYLES
-   --------------------------------------------------------------------------
-   - Normalize box-sizing for consistent layout calculations
-   - Remove default margin/padding on root elements
-   - Set a modern, legible system font stack
-   ========================================================================== */
+   -------------------------------------------------------------------------- */
 *,
 *::before,
 *::after { box-sizing: border-box; }
@@ -17,30 +14,31 @@ html, body {
 }
 
 /* ==========================================================================
-   1) THEME VARIABLES (TOKENS)
-   --------------------------------------------------------------------------
-   Centralized variables for background, colors, and shadows.
-   Change values here to reskin the entire app with minimal edits.
-   ========================================================================== */
+   1) THEME VARIABLES (TOKENS) — JOYFUL THEME
+   -------------------------------------------------------------------------- */
 :root {
-  --bg-image: url("../assets/img/background.jpg");
-  --panel-bg: rgba(0, 0, 0, 0.70);            /* generic dark overlay for panels */
-  --panel-bg-soft: rgba(255, 255, 255, 0.08); /* soft translucent overlay */
-  --text: #f0f0f0;                            /* primary foreground text */
-  --muted: #bbb;                              /* secondary/muted text */
-  --accent: #9cdcf5;                          /* borders, subtle links/highlights */
-  --cta: #00ffcc;                             /* call-to-action and emphasis */
-  --shadow-strong: 0 8px 30px rgba(0,0,0,.30);
-  --shadow-soft:   0 4px 20px rgba(0,0,0,.40);
+  --bg-image: url("../assets/img/background.png");
+
+  /* Surfaces */
+  --panel-bg: rgba(14, 16, 22, 0.78);         /* slightly warmer dark */
+  --panel-bg-soft: rgba(255, 255, 255, 0.10); /* soft glass overlay */
+
+  /* Typography */
+  --text: #F5F7FA;
+  --muted: #C7D0D9;
+
+  /* Accents */
+  --accent: #20D1E5; /* teal/turquoise */
+  --cta: #B2F200;    /* lime punch */
+
+  /* Shadows */
+  --shadow-strong: 0 10px 36px rgba(0,0,0,.35);
+  --shadow-soft:   0 6px 22px rgba(0,0,0,.30);
 }
 
 /* ==========================================================================
    2) GLOBAL LAYOUT & BACKGROUND
-   --------------------------------------------------------------------------
-   - Fullscreen background image (fixed) with cover sizing
-   - Center the main content with flexbox
-   - Use theme text color across the page
-   ========================================================================== */
+   -------------------------------------------------------------------------- */
 body {
   background: var(--bg-image) no-repeat center center fixed;
   background-size: cover;
@@ -51,12 +49,10 @@ body {
   color: var(--text);
 }
 
-/* Optional dark mode background (if you implement a theme toggle) */
 body.dark-mode {
   background: linear-gradient(135deg, #000000, #000000);
 }
 
-/* Two-column wrapper: left (intro) + right (chat) */
 #main-wrapper {
   display: flex;
   justify-content: center;
@@ -71,9 +67,7 @@ body.dark-mode {
 
 /* ==========================================================================
    3) LEFT COLUMN — INTRO / ABOUT
-   --------------------------------------------------------------------------
-   Contains: main intro card, headings, highlights list, "Try it" callout.
-   ========================================================================== */
+   -------------------------------------------------------------------------- */
 #intro-box {
   flex: 0 0 50%;
   max-width: 50%;
@@ -82,20 +76,21 @@ body.dark-mode {
 
 /* Main content card (glassmorphism) */
 .intro-content {
-  background: rgba(255,255,255,0.10);  /* consistent with chat look */
+  background: rgba(18, 22, 28, 0.72);
   backdrop-filter: blur(20px);
   color: var(--text);
   line-height: 1.5;
   padding: 32px;
   border-radius: 20px;
   box-shadow: var(--shadow-strong);
-  max-width: 700px;   /* improved readability on large screens */
-  margin: 0 auto;     /* center within the column */
+  max-width: 700px;
+  margin: 0 auto;
+  border: 1px solid rgba(32, 209, 229, 0.22);
 }
 
 /* Primary headline with gradient fill */
 .intro-content h1 {
-  font-size: 2.6rem;  /* emphasize top-level hierarchy */
+  font-size: 2.1rem;
   font-weight: 700;
   background: linear-gradient(90deg, var(--cta), var(--accent));
   background-clip: text;
@@ -133,7 +128,7 @@ body.dark-mode {
   position: relative;
 }
 .highlights li::before {
-  content: "▸";            /* arrow marker instead of dot */
+  content: "▸";
   position: absolute;
   left: 0;
   color: var(--cta);
@@ -145,8 +140,8 @@ body.dark-mode {
   margin-top: 28px;
   padding: 16px 20px;
   border-radius: 12px;
-  background: rgba(8, 16, 24, 0.78) !important;   /* darker for readability */
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  background: rgba(18, 22, 28, 0.70) !important;  /* lighter than old black */
+  border: 1px solid rgba(178, 242, 0, 0.35) !important;
   color: #dbe7ef !important;
   font-style: normal;
   font-size: 0.95rem;
@@ -200,9 +195,7 @@ body.dark-mode {
 
 /* ==========================================================================
    4) RIGHT COLUMN — CHAT
-   --------------------------------------------------------------------------
-   Contains: chat container, scrollable chat log, typing indicator, input.
-   ========================================================================== */
+   -------------------------------------------------------------------------- */
 #chatbox {
   display: flex;
   flex-direction: column;
@@ -212,25 +205,26 @@ body.dark-mode {
   min-width: 400px;
 
   min-height: 80vh;
-  background: rgba(255,255,255,0.10);
+  background: rgba(18, 22, 28, 0.72);
   backdrop-filter: blur(20px);
   border-radius: 20px;
   box-shadow: var(--shadow-strong);
   padding: 24px;
   color: var(--text);
+  border: 1px solid rgba(32, 209, 229, 0.22);
 }
 
 /* Scrollable message history */
 #chat-log {
   flex-grow: 1;
   overflow-y: auto;
-  background: rgba(6, 12, 18, 0.86) !important; /* darker than container for contrast */
+  background: rgba(12, 16, 22, 0.86) !important; /* still a tad darker for contrast */
   border-radius: 12px;
   padding: 16px;
   margin-bottom: 16px;
   font-size: 14px;
   line-height: 1.4;
-  border: 1px solid rgba(255,255,255,0.45);
+  border: 1px solid rgba(32, 209, 229, 0.28);
 }
 
 /* Single message row (icon + text) */
@@ -259,26 +253,23 @@ body.dark-mode {
   margin-top: 12px;
   padding: 12px 16px;
   border-radius: 12px;
-  border: 2px solid var(--cta);   /* keep brand accent */
+  border: 2px solid var(--cta);
   outline: none;
   font-size: 16px;
   background: rgba(255,255,255,0.9);
   color: #333;
-  box-shadow: 0 2px 5px rgba(0,0,0,.2);
+  box-shadow: 0 0 0 3px rgba(178, 242, 0, 0.18);
+}
+#user-input:focus {
+  box-shadow: 0 0 0 4px rgba(178, 242, 0, 0.25);
 }
 #user-input::placeholder { color: #888; }
 
 /* ==========================================================================
    5) UTILITY COMPONENTS
-   --------------------------------------------------------------------------
-   Small helpers: scroll hint (mobile only) and a floating theme toggle.
-   ========================================================================== */
-.mobile-chat-hint {
-  display: none;
-  text-decoration: none;
-}
+   -------------------------------------------------------------------------- */
+.mobile-chat-hint { display: none; text-decoration: none; }
 
-/* Floating theme toggle button (fixed position) */
 .floating-toggle {
   position: fixed;
   top: 20px;
@@ -296,13 +287,7 @@ body.dark-mode {
 
 /* ==========================================================================
    6) RESPONSIVE DESIGN (BREAKPOINTS)
-   --------------------------------------------------------------------------
-   - <600px: phones — reduce font sizes and constrain chat log height
-   - <900px: tablets/smaller laptops — switch to single-column layout
-   - <768px: enable scroll hint and minor UI tweaks
-   ========================================================================== */
-
-/* Phones */
+   -------------------------------------------------------------------------- */
 @media (max-width: 600px) {
   body { padding: 20px 10px; align-items: flex-start; }
 
@@ -311,12 +296,11 @@ body.dark-mode {
   .icon { width: 20px; height: 20px; }
 }
 
-/* Tablets / smaller laptops */
 @media (max-width: 900px) {
   body {
-    display: block;                 /* replace global flex with block flow */
+    display: block;
     min-height: 100vh;
-    background-attachment: scroll;  /* fixed backgrounds can lag on mobile */
+    background-attachment: scroll;
   }
 
   #intro-box, #chatbox {
@@ -328,17 +312,10 @@ body.dark-mode {
   #chatbox { min-height: 60vh; }
 }
 
-/* Scroll hint — shown only on mobile */
 @media (max-width: 768px) {
   .mobile-chat-hint {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: 24px auto;
-    animation: bounce 2s infinite;
-    text-align: center;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: relative; margin: 24px auto; animation: bounce 2s infinite; text-align: center;
   }
   .mobile-chat-hint img {
     width: 64px; height: 64px; margin-bottom: 8px;
@@ -349,18 +326,12 @@ body.dark-mode {
     background: rgba(0,0,0,.4);
     padding: 6px 12px; border-radius: 12px;
   }
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50%      { transform: translateY(-10px); }
-  }
+  @keyframes bounce { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
 }
 
 /* ==========================================================================
    7) ACCESSIBILITY (A11Y)
-   --------------------------------------------------------------------------
-   Utility class for screen-reader-only content:
-   - Hidden visually, still accessible to assistive tech.
-   ========================================================================== */
+   -------------------------------------------------------------------------- */
 .visually-hidden {
   position: absolute !important;
   width: 1px; height: 1px;
@@ -371,152 +342,71 @@ body.dark-mode {
 
 /* ==========================================================================
    8) MOBILE POLISH — UX/READABILITY IMPROVEMENTS
-   --------------------------------------------------------------------------
-   Additional tweaks for touch devices:
-   - Adjust typography and paddings
-   - Reduce motion/blur where needed
-   - Keep input reachable and visible
-   ========================================================================== */
-
-/* 8.1) Better text scale/density on mobile */
+   -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
-  .intro-content {
-    padding: 20px;
-    margin: 0 auto;
-    line-height: 1.5;
-  }
-
-  .intro-kicker {
-    font-size: .9rem;
-    letter-spacing: .8px;
-    margin-bottom: 8px;
-  }
-
+  .intro-content { padding: 20px; margin: 0 auto; line-height: 1.5; }
+  .intro-kicker { font-size: .9rem; letter-spacing: .8px; margin-bottom: 8px; }
   .intro-content h1 {
     font-size: clamp(1.6rem, 6vw, 2.1rem);
     -webkit-text-fill-color: initial;
     color: var(--cta);
     margin-bottom: 16px;
   }
-
-  .intro-underline {
-    width: 64px;
-    height: 3px;
-    margin: 8px 0 16px 0;
-  }
-
-  .intro-content p {
-    font-size: 1rem;       /* slightly smaller paragraphs on phones */
-    line-height: 1.55;
-    color: #f5f7fa;        /* a tad brighter for WCAG contrast */
-    margin-bottom: 12px;
-  }
-
-  .highlights li {
-    font-size: .98rem;
-    margin: 8px 0;
-  }
-
-  .try-it {
-    margin-top: 16px;
-    padding: 12px 14px;
-    border-radius: 10px;
-    color: #e9eef2;        /* stronger contrast on mobile */
-  }
+  .intro-underline { width: 64px; height: 3px; margin: 8px 0 16px 0; }
+  .intro-content p { font-size: 1rem; line-height: 1.55; color: #f5f7fa; margin-bottom: 12px; }
+  .highlights li { font-size: .98rem; margin: 8px 0; }
+  .try-it { margin-top: 16px; padding: 12px 14px; border-radius: 10px; color: #e9eef2; }
 }
 
-/* 8.2) Single-column layout and practical card heights */
 @media (max-width: 900px) {
   #main-wrapper {
-    display: block;         /* single-column flow */
+    display: block;
     width: 100%;
-    max-width: 720px;       /* comfortable reading width for phones+ */
-    margin: 0 auto;         /* real centering */
-    padding: 16px;          /* less edge padding */
-    gap: 0;                 /* gap is irrelevant for block layout */
-  }
-
-  #intro-box, #chatbox {
-    border-radius: 16px;
-    box-shadow: var(--shadow-soft);
-  }
-
-  #chatbox {
-    min-height: 65vh;
+    max-width: 720px;
+    margin: 0 auto;
     padding: 16px;
+    gap: 0;
   }
 
-  #chat-log {
-    min-height: 38vh;
-    max-height: 48vh;       /* avoid “bottomless well” on small screens */
-  }
-
+  #intro-box, #chatbox { border-radius: 16px; box-shadow: var(--shadow-soft); }
+  #chatbox { min-height: 65vh; padding: 16px; }
+  #chat-log { min-height: 38vh; max-height: 48vh; }
   #user-input {
-    font-size: 16px;        /* Lighthouse: min 16px for touch targets */
-    padding: 12px 14px;
-    border: 2px solid var(--cta);
-    position: sticky;       /* keep input reachable while scrolling */
-    bottom: 8px;
-    width: 100%;
+    font-size: 16px; padding: 12px 14px; border: 2px solid var(--cta);
+    position: sticky; bottom: 8px; width: 100%;
   }
 }
 
-/* 8.3) Touch target sizes & micro-interactions */
 @media (max-width: 768px) {
-  .examples li { padding: 6px 0; } /* larger tap targets */
-  .mobile-chat-hint p {
-    font-size: .95rem;
-    padding: 6px 10px;
-  }
+  .examples li { padding: 6px 0; }
+  .mobile-chat-hint p { font-size: .95rem; padding: 6px 10px; }
 }
-
-/* 8.4) Bullet color consistency on mobile */
-@media (max-width: 768px) {
-  .highlights li::before { color: var(--cta); }
-}
+@media (max-width: 768px) { .highlights li::before { color: var(--cta); } }
 
 /* ==========================================================================
    9) FALLBACKS & FIXED BACKGROUND LAYER
-   --------------------------------------------------------------------------
-   - Solid color fallback to prevent white flashes during scroll
-   - No-backdrop-filter support: use solid semi-opaque panels
-   - Fixed ::before background layer for stability on mobile
-   ========================================================================== */
-
-/* Solid fallback background (prevents flashing on scroll) */
+   -------------------------------------------------------------------------- */
 html, body { background-color: #0b111a; }
 
-/* If backdrop-filter is not supported, use solid, semi-opaque panels */
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .intro-content,
-  #chatbox,
-  #chat-log {
-    background: rgba(12, 20, 28, 0.86);    /* stable dark surface */
+  .intro-content, #chatbox, #chat-log {
+    background: rgba(18, 22, 28, 0.88);
     border: 1px solid rgba(255,255,255,0.06);
   }
 }
 
-/* Mobile: disable glass effect and fixed background to avoid jank */
 @media (max-width: 900px) {
-  body {
-    background-attachment: scroll;
-    background-size: cover;
-  }
+  body { background-attachment: scroll; background-size: cover; }
 
-  .intro-content,
-  #chatbox,
-  #chat-log {
+  .intro-content, #chatbox, #chat-log {
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
-    background: rgba(12, 20, 28, 0.88) !important; /* fully stable card */
+    background: rgba(18, 22, 28, 0.88) !important;
     border: 1px solid rgba(255,255,255,0.07);
   }
-
-  /* Prevent accidental horizontal scrolling on narrow viewports */
   #main-wrapper { overflow-x: hidden; }
 }
 
-/* Desktop → keep gradient H1; Mobile → plain color for clarity */
 @media (max-width: 768px) {
   .intro-content h1 {
     -webkit-text-fill-color: initial;
@@ -525,7 +415,6 @@ html, body { background-color: #0b111a; }
   }
 }
 
-/* Fixed background layer behind all content (smooth on mobile) */
 body::before{
   content:"";
   position: fixed;
@@ -536,31 +425,12 @@ body::before{
   background-position: center;
   background-size: cover;
   will-change: transform;
-  transform: translateZ(0); /* GPU hint for smoother scrolling */
-}
-
-/* Global darkening of cards for better legibility on image backgrounds */
-.intro-content,
-#chatbox,
-#chat-log{
-  background: rgba(8, 16, 24, 0.82) !important;     /* overall darker surface */
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  backdrop-filter: none; /* avoid unstable blur on mobile */
-}
-
-@media (max-width: 900px){
-  body{ background-attachment: scroll; }
+  transform: translateZ(0);
 }
 
 /* ==========================================================================
    10) SOCIAL ICONS & ACTIONS
-   --------------------------------------------------------------------------
-   - Floating social icons group (optional)
-   - Social strip bar under chat
-   - Download CV button styling
-   ========================================================================== */
-
-/* Optional floating social icons (bottom-right-ish) */
+   -------------------------------------------------------------------------- */
 .social-icons {
   position: absolute;
   bottom: 40px;
@@ -574,12 +444,8 @@ body::before{
   color: rgb(254, 254, 254);
   transition: transform 0.3s ease, color 0.3s ease;
 }
-.social-icons a:hover {
-  transform: scale(1.2);
-  color: #0800ff;
-}
+.social-icons a:hover { transform: scale(1.2); color: var(--accent); }
 
-/* Horizontal social/action strip placed under the chat container */
 .social-strip{
   display:flex; align-items:center; gap:16px;
   margin-top:16px;
@@ -589,7 +455,6 @@ body::before{
   backdrop-filter: none;
 }
 
-/* Single circular social icon button */
 .si{
   display:inline-flex; align-items:center; justify-content:center;
   width:40px; height:40px; border-radius:50%;
@@ -599,21 +464,19 @@ body::before{
 }
 .si:hover{
   transform: translateY(-2px) scale(1.05);
-  box-shadow:0 6px 18px rgba(0,255,204,.25);
-  color:#00ffcc; background: rgba(255,255,255,.1);
+  box-shadow:0 6px 18px rgba(178,242,0,.25);
+  color: var(--cta); background: rgba(255,255,255,.1);
 }
 
-/* Prominent CV download button (aligned to the right of the strip) */
 .cv-btn{
   margin-left:auto;
   padding:10px 14px;
   border-radius:10px;
-  border:1px solid #00ffcc;
-  color:#0a1a22; background:#00ffcc;
+  border:1px solid var(--cta);
+  color:#0a1a22; background: var(--cta);
   font-weight:600; text-decoration:none;
   transition: filter .2s ease, transform .2s ease;
 }
 .cv-btn:hover{ filter: brightness(1.05); transform: translateY(-1px); }
 
-/* Ensure the action strip spans full column width under the chat box */
 #chatbox + .social-strip{ width:100%; }
