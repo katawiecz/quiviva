@@ -1,7 +1,8 @@
 {
   "name": "ai_chatbot",
   "version": "1.0.0",
-  "description": "## What is this?",
+  "description": "##A standalone AI Chatbot that powers kasiaaichatbot.me.",
+  "license": "SEE LICENSE IN LICENSE.md",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +13,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/katawiecz/vercel-api/issues"
   },
