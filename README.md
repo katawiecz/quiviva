@@ -2,7 +2,6 @@
 
 [![Made with Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://vercel.com/) 
 ![Powered by OpenAI](https://img.shields.io/badge/Powered%20by-OpenAI-412991?logo=openai&logoColor=white) 
-![License](https://img.shields.io/github/license/katawiecz/vercel-api) 
 ![GitHub Repo stars](https://img.shields.io/github/stars/katawiecz/vercel-api?style=social) 
 ![Status](https://img.shields.io/badge/status-active-brightgreen) 
 ![Built with](https://img.shields.io/badge/built%20with-HTML%2FCSS%2FJS%20%2B%20Node.js-informational) 
