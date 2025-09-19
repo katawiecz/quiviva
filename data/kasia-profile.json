@@ -46,7 +46,7 @@
   "about": {
     "based_in": "Italy (Piedmont)",
     "nationality": "Polish",
-    "origin_region": "Silesia, Poland"
+    "origin_region": "Poland (Silesia)"
   },
 
   "preferences": {
@@ -55,11 +55,31 @@
     "travel": "occasional (<10%)"
   },
 
-  "offer_preferences": {
-    "employment_type": ["full-time", "B2B"],
-    "seniority_level": "mid-senior",
-    "industries_preference": ["Tech", "Consulting", "Product"]
-  },
+"offer_preferences": {
+  "employment_type": ["full-time", "B2B"],
+  "seniority_level": "mid-senior",
+  "roles_of_interest": [
+    "Endpoint Management Specialist",
+    "Modern Workplace Engineer",
+    "IT Consultant",
+    "Cloud & Productivity Tools Specialist"
+  ],
+  "industries_preference": [
+    "Technology & Software",
+    "Consulting & Professional Services",
+    "Product Companies",
+    "Innovative Startups"
+  ],
+  "work_values": [
+    "continuous learning and growth",
+    "collaboration and teamwork",
+    "innovation and creativity",
+    "building solutions with real-world impact"
+  ],
+
+  "current_availability": "Open to start immediately",
+  "work_timezone": "European timezones (CET/CEST or similar)"
+},
 
   "compensation": {
     "compensation_policy": "Share range on a screening call after scope clarification; market-aligned for EU remote.",
@@ -82,9 +102,7 @@
   "work_environment": {
     "working_hours": "Flexible with CET core hours 10:00–16:00",
     "business_languages": ["Polish (native)", "English (C1/C2)", "Italian (B1/B2)"],
-    "ic_vs_manager": "individual contributor",
-    "company_size_preference": ["scale-up", "enterprise"],
-    "team_values": ["documentation-first", "SLA discipline", "constructive feedback"]
+    "ic_vs_manager": "individual contributor"
   },
 
   "target_roles": [
@@ -158,69 +176,53 @@
     "Long isolation without teamwork or feedback"
   ]
 },
+"workplace": [
+  {
+    "position": "Global Workplace Specialist",
+    "company": "Global Shipping Company",
+    "period": "2022 – 2025",
+    "tools": "Intune, ServiceNow, ConnectWise, ITIL, Autopilot",
+    "skills": "Problem-solving, teamwork, adaptability, root cause analysis",
+    "information": "First international role; quickly adapted to new environment and language.",
+    "information2": "Most recent position, currently open for new opportunities."
+  },
+  {
+    "position": "Technical Services Engineer",
+    "company": "Fujitsu",
+    "period": "2021 – 2022",
+    "tools": "SCCM, CMTrace, ServiceNow"
+  },
+  {
+    "position": "Associate Technical Services Engineer",
+    "company": "Fujitsu",
+    "period": "2020 – 2021"
+  },
+  {
+    "position": "Junior Infrastructure Engineer",
+    "company": "Capgemini",
+    "period": "2019 – 2020"
+  },
+  {
+    "position": "Service Centre Analyst",
+    "company": "Capgemini",
+    "period": "2016 – 2019"
+  }
+],
 
-  "workplace": [
-    {
-      "position": "Global Workplace Specialist",
-      "company": "Mediterranean Shipping Company S.A. (MSC)",
-      "city": "Turin",
-      "start": "2022-04-04",
-      "end": "2025-06-14",
-      "availability": "Can start new work immediately",
-      "tools": "Intune, ServiceNow, ConnectWise, ITIL, Autopilot",
-      "skills": "Problem-solving, teamwork and communication, adaptability, root cause analysis",
-      "information": "First job in Italy; started without Italian and learned on the job.",
-      "information2": "No longer employed at MSC; this was the most recent role."
-    },
-    {
-      "position": "Technical Services Engineer",
-      "company": "Fujitsu Poland",
-      "city": "Katowice",
-      "start": "2021-03",
-      "end": "2022-04",
-      "tools": "SCCM, CMTrace, ServiceNow"
-    },
-    {
-      "position": "Associate Technical Services Engineer",
-      "company": "Fujitsu Poland",
-      "city": "Katowice",
-      "start": "2020-02",
-      "end": "2021-03"
-    },
-    {
-      "position": "Junior Infrastructure Engineer",
-      "company": "Capgemini",
-      "city": "Katowice",
-      "start": "2019-06",
-      "end": "2020-01"
-    },
-    {
-      "position": "Service Centre Analyst",
-      "company": "Capgemini",
-      "city": "Katowice",
-      "start": "2016-05",
-      "end": "2019-05"
-    }
-  ],
-
-  "education": [
-    {
-      "type": "Master's Degree",
-      "title": "Master of Scientific Information and Library Science",
-      "institution": "University of Silesia",
-      "location": "Katowice, Poland",
-      "start": "2011-10-01",
-      "end": "2013-09-30"
-    },
-    {
-      "type": "Bachelor's Degree",
-      "title": "Bachelor of Scientific Information and Library Science",
-      "institution": "University of Silesia",
-      "location": "Katowice, Poland",
-      "start": "2008-10-01",
-      "end": "2011-09-30"
-    }
-  ],
+"education": [
+  {
+    "type": "Master's Degree",
+    "title": "Scientific Information and Library Science",
+    "institution": "University of Silesia",
+    "period": "2011 – 2013"
+  },
+  {
+    "type": "Bachelor's Degree",
+    "title": "Scientific Information and Library Science",
+    "institution": "University of Silesia",
+    "period": "2008 – 2011"
+  }
+],
 
   "university_courses": [
     "Information Technology",

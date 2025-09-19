@@ -146,4 +146,29 @@ Deadline: September 22, 2025 AoE.
 
 ---
 
+# License 🎉
+
+This repository uses a **dual-license** approach 🚀:
+
+## 1. Code (Open Source – MIT) 💻
+All **source code** in this repository is licensed under the **MIT License**, one of the most widely recognized open source licenses.  
+✅ This makes the project fully eligible for participation in the **GitHub ForTheLoveOfCode 2025** contest!  
+
+You are free to **use, modify, and share** the code, provided attribution is given to the original author (Katarzyna Wieczorek).  
+👉 Full text: [MIT License](https://opensource.org/licenses/MIT)
+
+## 2. Content (Non-Code Assets – CC BY-NC 4.0) 🎨
+The **profile data, CV PDF, images, and other non-code assets** in this repository are licensed under  
+the **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)** license.  
+
+📌 You may **share and adapt** these materials for **non-commercial purposes** with attribution.  
+❌ Commercial use is not permitted without explicit permission.  
+👉 Full text: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
+
+---
+
+© 2025 Katarzyna Wieczorek ✨
+
+
+
 ### Cheers, and happy coding! ✨  
