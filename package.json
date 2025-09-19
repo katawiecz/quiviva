@@ -1,22 +1,31 @@
 {
-  "name": "ai_chatbot",
+  "name": "ai_chatbot_cv",
   "version": "1.0.0",
-  "description": "##A standalone AI Chatbot that powers kasiaaichatbot.me.",
+  "description": "💬 An interactive AI-powered CV chatbot that showcases mine professional journey. Built with JavaScript, Node.js, and OpenAI API. #ForTheLoveOfCode",
   "license": "SEE LICENSE IN LICENSE.md",
   "main": "index.js",
   "scripts": {
+    "start": "vercel dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/katawiecz/vercel-api.git"
+    "url": "https://github.com/katawiecz/aichatbot"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "AI",
+    "chatbot",
+    "interactive-cv",
+    "openai",
+    "nodejs",
+    "vercel",
+    "ForTheLoveOfCode"
+  ],
+  "author": "Katarzyna Wieczorek",
   "bugs": {
-    "url": "https://github.com/katawiecz/vercel-api/issues"
+    "url": "https://github.com/katawiecz/aichatbot/issues"
   },
-  "homepage": "https://github.com/katawiecz/vercel-api#readme",
+  "homepage": "https://www.kasiaaichatbot.me",
   "dependencies": {
     "openai": "^5.9.0"
   }
