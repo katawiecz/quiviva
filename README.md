@@ -1,4 +1,4 @@
-# AI Chatbot CV – kasiaaichatbot.me  
+# Quiviva – An Interactive AI CV
 
 [![Made with Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://vercel.com/) 
 ![Powered by OpenAI](https://img.shields.io/badge/Powered%20by-OpenAI-412991?logo=openai&logoColor=white) 
@@ -126,8 +126,8 @@ Set in **Vercel → Project Settings → Environment Variables**:
 ## 🛠️ Run Locally  
 
 ```bash
-git clone https://github.com/katawiecz/ai_chatbot.git
-cd ai_chatbot
+git clone https://github.com/katawiecz/quiviva.git
+cd quiviva
 npm install
 
 # Add local .env
