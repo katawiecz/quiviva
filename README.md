@@ -21,15 +21,24 @@ Built with **vanilla JavaScript**, **Node.js serverless functions on Vercel**, a
 ## 🌱 Why I built this  
 
 This project was born from pure passion, relentless curiosity, and an unstoppable urge to create.
-After years in IT, I decided to step into the world I had always admired in my developer colleagues. Technology has always been my fire — a spark that ignites excitement every time I dive deeper. It’s an endless well, where every day uncovers something new.
+After years in IT, I decided to step into the world I had always admired in my developer colleagues. 
+Technology has always been my fire — a spark that ignites excitement every time I dive deeper. 
+It’s an endless well, where every day uncovers something new.
 
-Building this chatbot wasn’t just about code — it was about breaking into a new frontier, learning programming hands-on, and blending creativity with logic. I wanted to turn a job search into an adventure, a joyful exploration of how AI and human stories can come together. Instead of sending another static PDF into the void, I created an interactive experience that speaks, learns, and inspires.
+Building this chatbot wasn’t just about code — it was about breaking into a new frontier, learning programming hands-on, and blending creativity with logic. 
+I wanted to turn a job search into an adventure, a joyful exploration of how AI and human stories can come together. 
+Instead of sending another static PDF into the void, I created an interactive experience that speaks, learns, and inspires.
 
-For me, coding is not just skill — it’s a mindset, a playground, and a stage for collaboration. What excites me most is not just the technology itself, but how it connects people: networking, teamwork, and creating something bigger together.
+For me, coding is not just skill — it’s a mindset, a playground, and a stage for collaboration. 
+What excites me most is not just the technology itself, but how it connects people: networking, teamwork, and creating something bigger together.
 
-That’s why I’m openly inviting cooperation and collaboration. If you share the same spark for technology, creativity, or pushing boundaries, let’s build something together. This project is proof of what happens when curiosity meets code — and I’m ready to take it further with others who feel the same fire.
+That’s why I’m openly inviting cooperation and collaboration. 
+If you share the same spark for technology, creativity, or pushing boundaries, let’s build something together. 
+This project is proof of what happens when curiosity meets code — and I’m ready to take it further with others who feel the same fire.
 
-This chatbot is my bold step into programming — a joyful rebellion against stereotypes, proof that even a career search can be reimagined through curiosity and creativity. Whether or not it wins For the Love of Code 2025, it has already been a win for me: a source of growth, fun, and endless ideas waiting to be turned into reality.
+This chatbot is my bold step into programming — a joyful rebellion against stereotypes, 
+proof that even a career search can be reimagined through curiosity and creativity. 
+Whether or not it wins For the Love of Code 2025, it has already been a win for me: a source of growth, fun, and endless ideas waiting to be turned into reality.
 
 This is only the beginning — my head is still buzzing with concepts, brainstorms, and visions ready to take shape. 🚀
 ---
