@@ -9,10 +9,12 @@
 
 ## 📜 License
 
+## License
 | Component | License |
 |-----------|---------|
 | Code      | [MIT License](./LICENSE) |
-| Content (profile data, graphics, CV PDF) | [CC BY-NC 4.0](./LICENSE-CONTENT.md) |
+| Content (profile data, CV, graphics) | [CC BY-NC 4.0](./LICENSE-CONTENT.md) |
+
 ---
 
 ## 💡 What it is  
