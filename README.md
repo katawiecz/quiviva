@@ -7,6 +7,12 @@
 ![Built with](https://img.shields.io/badge/built%20with-HTML%2FCSS%2FJS%20%2B%20Node.js-informational) 
 ![ForTheLoveOfCode](https://img.shields.io/badge/ForTheLoveOfCode-2025-magenta)
 
+## 📜 License
+
+| Component | License |
+|-----------|---------|
+| Code      | [MIT License](./LICENSE) |
+| Content (profile data, graphics, CV PDF) | [CC BY-NC 4.0](./LICENSE-CONTENT.md) |
 ---
 
 ## 💡 What it is  
