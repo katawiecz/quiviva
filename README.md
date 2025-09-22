@@ -90,14 +90,15 @@ One moment you’re reading about endpoint management… the next, you’re in a
 This isn’t just code. This is joy, curiosity, and a tiny rebellion against boring job hunts.
 Because who said talking about IT skills can’t feel like an epic quest? 🚀🐉
 
-
 ## ✨ Demo  
 
-- Live: [https://www.kasiaaichatbot.me](https://www.kasiaaichatbot.me)  
-- Screenshot:  
+- Live site: [https://www.kasiaaichatbot.me](https://www.kasiaaichatbot.me)  
 
-  ![Demo Screenshot](./public/assets/img/screenshot.png)  
+- See it in action 👇  
+  ![Interactive CV Demo](./public/assets/img/Nagrywanie.gif)  
 
+- Prefer a quick glance? Here’s a static preview:  
+  ![Screenshot](./public/assets/img/screenshot.png)  
 ---
 
 ## 🚀 Features  
@@ -107,6 +108,8 @@ Because who said talking about IT skills can’t feel like an epic quest? 🚀�
 - 🧑‍💼 **Recruiter-friendly tone** – concise, professional, structured.  
 - 🔒 **Secure serverless backend** – API key hidden safely on the server.  
 - 🪄 **Easter Egg mode** – mention “Gandalf” or “Thor” and you’ll unlock nerdy rhyming answers.  
+
+FYI: For privacy reasons, the downloadable CV in this demo is a placeholder. The full version is available upon request.
 
 ---
 
