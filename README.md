@@ -95,7 +95,8 @@ Because who said talking about IT skills can’t feel like an epic quest? 🚀�
 - Live site: [https://www.kasiaaichatbot.me](https://www.kasiaaichatbot.me)  
 
 - See it in action 👇  
-  ![Interactive CV Demo](./public/assets/img/Nagrywanie.gif)  
+   ![Interactive CV Demo](https://raw.githubusercontent.com/katawiecz/quiviva/main/public/assets/img/Nagrywanie.gif)
+
 
 - Prefer a quick glance? Here’s a static preview:  
   ![Screenshot](./public/assets/img/screenshot.png)  
