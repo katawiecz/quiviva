@@ -79,6 +79,18 @@ a source of growth, fun, and endless ideas waiting to be turned into reality.
 This is only the beginning — my head is still buzzing with concepts, brainstorms, and visions ready to take shape. 🚀  
 
 
+##  🪄✨ The Secret Easter Egg ✨🪄
+
+Shhh… don’t tell the recruiters 👀 — but this chatbot has a secret nerd mode!
+Type in a fantasy or superhero word like Gandalf, Thor, or magia, and suddenly Kasia’s CV transforms into a geeky rhyme saga. 🧙‍♂️⚡
+
+It’s like having Gandalf from Middle-earth and Master Yoda as your personal recruiters, presenting Kasia’s skills in riddles and rhymes.
+One moment you’re reading about endpoint management… the next, you’re in a D&D campaign where Intune policies are magic spells. 🎲✨
+
+This isn’t just code. This is joy, curiosity, and a tiny rebellion against boring job hunts.
+Because who said talking about IT skills can’t feel like an epic quest? 🚀🐉
+
+
 ## ✨ Demo  
 
 - Live: [https://www.kasiaaichatbot.me](https://www.kasiaaichatbot.me)  
@@ -138,6 +150,13 @@ Set in **Vercel → Project Settings → Environment Variables**:
 > 🔑 Never commit `.env*` files. Secrets stay in Vercel.  
 
 ---
+
+## 🔐 Security Note
+The `APP_AUTH` value used in the client is **not a secret**.  
+All requests are validated on the server, which requires the `x-app-auth` header to match the `SERVER_API_TOKEN`.  
+This ensures that even if someone inspects the frontend code, backend access is still protected.
+
+
 
 ## 🛠️ Run Locally  
 
