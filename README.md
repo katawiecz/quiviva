@@ -20,10 +20,17 @@ Built with **vanilla JavaScript**, **Node.js serverless functions on Vercel**, a
 
 ## 🌱    Project Story
 
-This project was born from pure passion, relentless curiosity, and an unstoppable urge to create.  
-After years in IT, I decided to step into the world I had always admired in my developer colleagues.  
-Technology has always been my fire — a spark that ignites excitement every time I dive deeper.  
-It’s an endless well, where every day uncovers something new.  
+TThis project was born from pure passion, relentless curiosity, and an unstoppable urge to create.
+After years in IT, I decided to step into the world I had always admired in my developer colleagues.
+Technology has always been my fire — a spark that ignites excitement every time I dive deeper.
+It’s an endless well, where every day uncovers something new.
+
+At the same time, I want to be transparent: I am new both to programming and to GitHub.
+I am learning step by step, often using AI as a guide to help me explore this vast field.
+If you notice any gaps in formatting, structure, or repository practices, they are not intentional flaws,
+but rather signs of a beginner taking her first steps in a new environment.
+I trust that with time, I will master these tools and workflows more fluently,
+just as I have done with every challenge in my IT career.
 
 ---
 
