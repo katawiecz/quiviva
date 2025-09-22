@@ -20,7 +20,7 @@ Built with **vanilla JavaScript**, **Node.js serverless functions on Vercel**, a
 
 ## 🌱    Project Story
 
-TThis project was born from pure passion, relentless curiosity, and an unstoppable urge to create.
+This project was born from pure passion, relentless curiosity, and an unstoppable urge to create.
 After years in IT, I decided to step into the world I had always admired in my developer colleagues.
 Technology has always been my fire — a spark that ignites excitement every time I dive deeper.
 It’s an endless well, where every day uncovers something new.
@@ -56,7 +56,8 @@ What excites me most is not just the technology itself, but how it connects peop
 That’s why I’m openly inviting cooperation and collaboration.  
 If you share the same spark for technology, creativity, or pushing boundaries, let’s build something together.  
 This project is proof of what happens when curiosity meets code —  
-and I’m ready to take it further with others who feel the same fire.  
+and I’m ready to take it further with others who feel the same fire.
+Have ideas or spot a bug? Open an Issue or propose a PR. First-timers welcome 😊
 
 ---
 
