@@ -328,30 +328,33 @@
     "Blend creativity and engineering in everyday work"
   ],
 
-  "projects": [
-    {
-      "title": "GitHub projects",
-      "description": "Repositories of progremming work",
-      "technologies": ["HTML", "CSS", "JavaScript", "Node.js", "OpenAI API"],
-      "status": "in progress",
-      "link": "https://github.com/katawiecz"
-    },
-    {
-      "title": "Quiviva - AI Chatbot API",
-      "description": "Private GPT-based assistant embedded in portfolio site.",
-      "status": "functional",
-      "link": "https://github.com/katawiecz/quiviva"
-    },
-    {
-      "title": "IT Portfolio Page",
-      "description": "Personal IT portfolio website presenting small projects, skills and CV.",
-      "technologies": ["HTML", "CSS", "JavaScript"],
-      "status": "in progress",
-      "link": "https://katawiecz.github.io/IT_portfolio_by_katawiecz",
-      "repo": "https://github.com/katawiecz/IT_portfolio_by_katawiecz"
-    }
-    
-  ],
+"projects": [
+  {
+    "title": "GitHub projects",
+    "description": "A collection of programming work showcasing HTML, CSS, JavaScript and Node.js.",
+    "technologies": ["HTML", "CSS", "JavaScript", "Node.js", "OpenAI API"],
+    "status": "in progress",
+    "link_text": "GitHub Projects",
+    "link": "https://github.com/katawiecz"
+  },
+  {
+    "title": "Quiviva - AI Chatbot API",
+    "description": "A private GPT-based assistant embedded in her portfolio site.",
+    "status": "functional",
+    "link_text": "Quiviva Project",
+    "link": "https://github.com/katawiecz/quiviva"
+  },
+  {
+    "title": "IT Portfolio Page",
+    "description": "Personal IT portfolio website presenting projects, skills and CV.",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "status": "in progress",
+    "link_text": "IT Portfolio Page",
+    "link": "https://katawiecz.github.io/IT_portfolio_by_katawiecz",
+    "repo": "https://github.com/katawiecz/IT_portfolio_by_katawiecz"
+  }
+],
+
   "definitions": {
     "hybrid_environment": "In Kasia’s context, 'hybrid environment' refers to combined technology infrastructures such as Intune with SCCM, or Azure Active Directory integrated with on-premises Active Directory. It does not only mean remote + on-site work, but also co-management and coexistence of cloud and on-prem solutions."
   }
