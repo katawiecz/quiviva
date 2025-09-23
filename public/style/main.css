@@ -218,6 +218,7 @@ body.dark-mode {
 #chat-log {
   flex-grow: 1;
   overflow-y: auto;
+  max-height: 60vh;
   background: rgba(12, 16, 22, 0.86) !important; /* still a tad darker for contrast */
   border-radius: 12px;
   padding: 16px;
