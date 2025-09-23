@@ -350,5 +350,9 @@
       "link": "https://katawiecz.github.io/IT_portfolio_by_katawiecz",
       "repo": "https://github.com/katawiecz/IT_portfolio_by_katawiecz"
     }
-  ]
+    
+  ],
+  "definitions": {
+    "hybrid_environment": "In Kasia’s context, 'hybrid environment' refers to combined technology infrastructures such as Intune with SCCM, or Azure Active Directory integrated with on-premises Active Directory. It does not only mean remote + on-site work, but also co-management and coexistence of cloud and on-prem solutions."
+  }
 }
