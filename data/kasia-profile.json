@@ -65,12 +65,7 @@
 "offer_preferences": {
   "employment_type": ["full-time", "B2B"],
   "seniority_level": "mid-senior",
-  "roles_of_interest": [
-    "Endpoint Management Specialist",
-    "Modern Workplace Engineer",
-    "IT Consultant",
-    "Cloud & Productivity Tools Specialist"
-  ],
+  
   "industries_preference": [
     "Technology & Software",
     "Consulting & Professional Services",
@@ -134,7 +129,10 @@
     "Developer Advocate / Developer Relations Engineer",
     "Technical Writer / Content Designer",
     "Community Engineer",
-    "Solutions Engineer (AI/UEM)"
+    "Solutions Engineer (AI/UEM)",
+    "Endpoint Management Specialist",
+    "IT Consultant",
+    "Cloud & Productivity Tools Specialist"
   ],
 
   "creative_focus": [
@@ -143,7 +141,7 @@
     "Human-centric AI tools"
   ],
 
-  "fun_facts": [
+  "facts": [
     "More than 9 years of experience in IT Operations Services.",
     "Lives in Italy (Piedmont).",
     "Enjoys movies across many genres and isn't afraid of horror.",
@@ -332,23 +330,23 @@
 
   "projects": [
     {
-      "title": "Interactive CV",
-      "description": "Gamified, animated online CV with AI chatbot and language selection.",
+      "title": "GitHub projects",
+      "description": "Repositories of progremming work",
       "technologies": ["HTML", "CSS", "JavaScript", "Node.js", "OpenAI API"],
       "status": "in progress",
-      "link": "https://github.com/katawiecz/interactive_cv_project"
+      "link": "https://github.com/katawiecz"
     },
     {
-      "title": "AI Chatbot API",
+      "title": "Quiviva - AI Chatbot API",
       "description": "Private GPT-based assistant embedded in portfolio site.",
       "status": "functional",
-      "link": "https://vercel-api-swart.vercel.app"
+      "link": "https://github.com/katawiecz/quiviva"
     },
     {
       "title": "IT Portfolio Page",
-      "description": "Personal IT portfolio website presenting projects, skills and CV.",
+      "description": "Personal IT portfolio website presenting small projects, skills and CV.",
       "technologies": ["HTML", "CSS", "JavaScript"],
-      "status": "live",
+      "status": "in progress",
       "link": "https://katawiecz.github.io/IT_portfolio_by_katawiecz",
       "repo": "https://github.com/katawiecz/IT_portfolio_by_katawiecz"
     }
