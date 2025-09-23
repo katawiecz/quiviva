@@ -10,7 +10,8 @@
       "Workload prioritization",
       "Windows troubleshooting",
       "Remote work tools",
-      "Agile mindset"
+      "Agile mindset",
+      "Creating knowledge bases"
     ],
     "technical": [
       "Intune",
@@ -20,7 +21,13 @@
       "Hardware/software troubleshooting",
       "Cloud computing",
       "AI prompt engineering",
-      "GPT-based chatbot creation"
+      "GPT-based chatbot creation",
+      "Microsoft Office 365",
+      "Microsoft Exchange",
+      "Linux only basic troubleshooting",
+      "Scripting PowerShell only basic"
+     
+
     ],
     "intune_skills": [
       "Device enrollment and provisioning",
