@@ -1,11 +1,11 @@
 {
   "headers": [
     {
-      "source": "/(.*)", 
+      "source": "/(.*)",
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; frame-ancestors 'none'; upgrade-insecure-requests; img-src 'self' data: https://cdn-icons-png.flaticon.com; script-src 'self' https://cdn.counter.dev; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; connect-src 'self' https://vercel-api-swart.vercel.app"
+          "value": "default-src 'self'; frame-ancestors 'none'; upgrade-insecure-requests; img-src 'self' data: https://cdn-icons-png.flaticon.com https://counter.dev; script-src 'self' https://cdn.counter.dev; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; connect-src 'self' https://vercel-api-swart.vercel.app https://counter.dev https://api.counter.dev"
         },
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         { "key": "X-Content-Type-Options", "value": "nosniff" },
@@ -27,7 +27,7 @@
   "redirects": [
     {
       "source": "/download-cv",
-      "destination": "CV_EN_Katarzyna_Wieczorek.pdf",
+      "destination": "/assets/cv/CV_EN_Katarzyna_Wieczorek.pdf",
       "permanent": false
     }
   ]

@@ -44,11 +44,10 @@
           default-src 'self';
           frame-ancestors 'none';
           upgrade-insecure-requests;
-          img-src 'self' data: https://cdn-icons-png.flaticon.com;
+          img-src 'self' data: https://cdn-icons-png.flaticon.com https://counter.dev;
           script-src 'self' https://cdn.counter.dev;
           style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
-          connect-src 'self' https://vercel-api-swart.vercel.app https://counter.dev
-        ">
+          connect-src 'self' https://vercel-api-swart.vercel.app https://counter.dev https://api.counter.dev;">
 
   <!--
     Referrer Policy
