@@ -181,7 +181,9 @@ vercel dev
 Open on localhost or in your Vercel preview.  
 Ask questions in English, Polish, Italian or other language. 
 Expect concise, recruiter-friendly answers.  
-Drop in fantasy words like “Gandalf” or “Thor” to see the Easter Egg mode in action.  
+To unlock the Easter Egg mode, just ask a question that contains a fantasy keyword. 
+For example: “Who is better in code wizardry, Gandalf or Kasia?”
+Some of the Easter Egg key words: "Gandalf", "Thor", "Middle-earth", "middle earth", "magia", "Hulk", "Spiderman","lightsaber", "Jedi", "Sith", "Yoda", "Star Wars", "TARDIS".
 
 ---
 
