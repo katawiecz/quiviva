@@ -92,7 +92,7 @@ Because who said talking about IT skills can’t feel like an epic quest? 🚀�
 
 ## ✨ Demo  
 
-- Live site: [https://www.kasiaaichatbot.me](https://www.kasiaaichatbot.me)  
+- Live site: [https://www.kasiaaichatbot.me](https://vercel-api-swart.vercel.app/)  
 
 - See it in action 👇  
    ![Interactive CV Demo](https://raw.githubusercontent.com/katawiecz/quiviva/main/public/assets/img/Nagrywanie.gif)
