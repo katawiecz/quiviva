@@ -19,7 +19,7 @@
 
 ## 💡 What it is  
 
-A **standalone AI Chatbot** that powers [kasiaaichatbot.me](https://www.kasiaaichatbot.me).  
+A **standalone AI Chatbot** that powers [kasiaaichatbot.me](https://vercel-api-swart.vercel.app/).  
 It transforms a professional profile into an **interactive, multilingual experience** — not just a PDF, but a living CV where you can ask questions and get structured, recruiter-style answers.  
 
 Built with **vanilla JavaScript**, **Node.js serverless functions on Vercel**, and a structured **JSON profile**.  
